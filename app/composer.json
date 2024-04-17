@@ -1,0 +1,12 @@
+{
+	"require": {
+		"markstory/asset_compress": "dev-master",
+		"friendsofcake/authenticate": "dev-master",
+		"josegonzalez/cakephp-upload": "dev-master",
+		"cakephp/debug_kit": "2.2.*",
+		"cakedc/search": "dev-master"
+	},
+	"config": {
+		"vendor-dir": "Vendor/"
+	}
+}
