@@ -1,0 +1,139 @@
+<?php
+App::uses('OrdersFacilitiesController', 'Controller');
+
+/**
+ * OrdersFacilitiesController Test Case
+ *
+ */
+class OrdersFacilitiesControllerTest extends ControllerTestCase {
+
+/**
+ * Fixtures
+ *
+ * @var array
+ */
+	public $fixtures = array(
+		'app.orders_facility',
+		'app.order',
+		'app.user',
+		'app.role',
+		'app.menu_link',
+		'app.menu',
+		'app.menu_links_role',
+		'app.menu_links_user',
+		'app.timezone',
+		'app.country',
+		'app.zone',
+		'app.country_detail',
+		'app.attraction_address',
+		'app.attraction',
+		'app.destination',
+		'app.destination_api_map',
+		'app.order_attraction',
+		'app.order_attraction_type',
+		'app.order_attraction_address',
+		'app.order_attraction_contact',
+		'app.order_attraction_product',
+		'app.currency',
+		'app.attraction_product_price',
+		'app.attraction_product',
+		'app.attraction_comment',
+		'app.attraction_enquiry',
+		'app.nationality',
+		'app.cart_item',
+		'app.cart',
+		'app.attraction_product_price_group',
+		'app.attraction_product_price_festival',
+		'app.specific_price',
+		'app.attraction_product_time_slot',
+		'app.order_attraction_product_price',
+		'app.order_attraction_product_price_group',
+		'app.order_passenger',
+		'app.temp_order',
+		'app.attraction_product_prices_nationality',
+		'app.salutation',
+		'app.traveller',
+		'app.attraction_regular_timing',
+		'app.week_day',
+		'app.attraction_closed_date',
+		'app.attraction_product_api_map',
+		'app.api_product',
+		'app.markup',
+		'app.attraction_product_pickup_point',
+		'app.pickup_point_type',
+		'app.attraction_product_cancellation_policy',
+		'app.attraction_product_combo',
+		'app.tag',
+		'app.attraction_products_tag',
+		'app.attractions_tag',
+		'app.attraction_product_prices_week_day',
+		'app.attraction_product_prices_except_nationality',
+		'app.order_attraction_product_pickup_point',
+		'app.order_attraction_product_time_slot',
+		'app.order_attraction_product_cancellation_policy',
+		'app.order_attraction_regular_timing',
+		'app.order_attraction_closed_date',
+		'app.facility',
+		'app.attractions_facility',
+		'app.order_attractions_facility',
+		'app.attraction_type',
+		'app.featured_attraction',
+		'app.top_attraction',
+		'app.attraction_contact',
+		'app.attraction_image',
+		'app.attraction_video',
+		'app.wishlist',
+		'app.category',
+		'app.category_api_map',
+		'app.attractions_category',
+		'app.user_detail',
+		'app.marital_status',
+		'app.user_social_profile',
+		'app.user_subscription_payment',
+		'app.subscription_plan',
+		'app.user_subscription',
+		'app.payment_method',
+		'app.payment_status'
+	);
+
+/**
+ * testIndex method
+ *
+ * @return void
+ */
+	public function testIndex() {
+	}
+
+/**
+ * testLists method
+ *
+ * @return void
+ */
+	public function testLists() {
+	}
+
+/**
+ * testView method
+ *
+ * @return void
+ */
+	public function testView() {
+	}
+
+/**
+ * testAdd method
+ *
+ * @return void
+ */
+	public function testAdd() {
+	}
+
+/**
+ * testEdit method
+ *
+ * @return void
+ */
+	public function testEdit() {
+	}
+
+}
