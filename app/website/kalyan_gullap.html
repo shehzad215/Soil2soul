@@ -1,0 +1,521 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Soil2Soul</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="fonts/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="x-icon" href="favicon.ico">
+
+<!-- Menu css and script start--> 
+<script src="menu/jquery-latest.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="menu/navigation.css">
+<link rel="stylesheet" href="menu/navigation.dropdown.css">
+<!-- Menu css and script end--> 
+
+<script src="js/bootstrap.min.js"></script> 
+
+<!-- Bx css and script start-->
+<link rel="stylesheet" href="bxslider/jquery.bxslider.css">
+<script src="bxslider/jquery.bxslider.min.js"></script> 
+<script>
+	$(document).ready(function(){
+		$('.bxslider1').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 40,
+			infiniteLoop: true,
+			slideWidth: 320,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: true,
+			pager:false,
+		});	       
+	});
+	
+	$(document).ready(function(){
+		$('.bxslider2').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 0,
+			infiniteLoop: false,
+			//slideWidth: 262,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: true,
+			pager:false,
+		});	       
+	});
+	
+	
+	$(document).ready(function(){
+		$('.bxslider3').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 0,
+			infiniteLoop: false,
+			//slideWidth: 262,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: true,
+			pager:true,
+		});	       
+	});
+</script> 
+<!-- Bx slider css and script end--> 
+
+<!-- Fixed Header script start--> 
+<script>
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 50) {
+        $(".topband").addClass("active");
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+        $(".topband").removeClass("active");
+    }
+});
+</script> 
+<!-- Fixed Header script end--> 
+<!-- Animated Css and script start-->
+<link rel="stylesheet" href="animate/animate.css">
+<script src="animate/wow.min.js"></script> 
+<script>
+new WOW().init();
+</script> 
+<!-- Animated Css and script end-->
+</head>
+
+<body>
+
+<!--Add Your Review Modal start here -->
+<div id="AddReview" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm"> 
+    
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Your Review</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter your email id">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Mobile / Telephone">
+        </div>
+        <div class="form-group">
+          <select class="form-controlselect">
+            <option>Nationality</option>
+            <option>India</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Your Message or Query"></textarea>
+        </div>
+        <div class="text-center">
+          <button class="submit_btn1 btnmd">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Add Your Review Modal end here --> 
+
+<!--Enquire Modal start here -->
+<div id="Enquire" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm"> 
+    
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Enquire</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter your email id">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Mobile / Telephone">
+        </div>
+        <div class="form-group">
+          <select class="form-controlselect">
+            <option>Nationality</option>
+            <option>India</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Your Message or Query"></textarea>
+        </div>
+        <div class="text-center">
+          <button class="submit_btn1 btnmd" type="button" data-toggle="modal" data-target="#myModal1">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Enquire Modal end here --> 
+
+<!--TourScholars Modal start here -->
+<div id="TourScholars" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered"> 
+    
+    <!-- Modal content-->
+    <div class="scholarmodal-content">
+      <button type="button" class="close closemodal" data-dismiss="modal">&times;</button>
+      <div class="modal-body">
+        <h4 class="scholarmodal-title">Prof. Sampadanada Mishra</h4>
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="guideimgcircle2">
+              <div class="guideleaf2"><img src="img/guideleaf.png"></div>
+              <div class="guideimg2"><img src="img/guide_img01.jpg"></div>
+            </div>
+          </div>
+          <div class="col-sm-7 rowmargin30 conte"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <strong>Excepteur sint occaecat cupidatat</strong> non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+            <br>
+            Voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, isst laborum sunt in culpa qui officia deserunt mollit anim. </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--TourScholars Modal end here -->
+
+<main class="mainwrapper">
+<!--Topband start here-->
+<header class="topband">
+  <div class="container">
+    <div class="menulogobg">
+      <div class="row nopaddingarea">
+        <div class="col-md-4 col-sm-12 col-xs-12 nopadding">
+          <div class="menu">
+            <nav id="navigation" class="navigation">
+              <div class="nav-header">
+                <div class="nav-toggle"></div>
+              </div>
+              <div class="nav-menus-wrapper">
+                <ul class="nav-menu">
+                  <li><a href="default.html">Home</a></li>
+                  <li><a href="journeys.html">Journeys</a></li>
+                  <li><a href="#">About</a>
+                    <ul class="nav-dropdown">
+<li><a href="about.html">About us</a></li>
+<li><a href="ourteam.html">Our Team</a></li>
+<li><a href="brand.html">Soil 2 Soul Brand</a></li>
+<li><a href="whyspiritual.html">Why Spiritual Tours?</a></li>		
+<li><a href="sanatanadharma.html">Sanatan Dharma</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+                  </li>
+					<li class="hidden-lg hidden-md"><a href="traveltips.html">Travel Tips</a></li>
+                  <li class="hidden-lg hidden-md"><a href="blogs.html">Blogs</a></li>
+				  <li class="hidden-lg hidden-md"><a href="testimonials.html">Testimonials</a></li>
+                  <li class="hidden-lg hidden-md"><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-9 nopadding">
+          <div class="logo"><a href="default.html"><img src="img/logolink.png" class="hidden-sm hidden-xs"><img src="img/logolink_mob.png" class="hidden-lg hidden-md"></a></div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-3 nopadding">
+          <div class="topmenu">
+            <ul>
+			  <li><a href="traveltips.html">Travel Tips</a></li>	
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--Topband end here--> 
+<!--Side Button start-->
+<div class="fixedsocialicons">
+  <ul>
+    <li><a href="tel://+919876543210"><i class="fa fa-phone"></i></a></li>
+    <li><a href="https://wa919876543210" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+  </ul>
+</div>
+<!--Side Button end-->
+<div class="maincontarea">
+<!--Collage start here-->
+<section class="innercollage">
+  <div class="innerheading">
+    <div class="lotus"><img src="img/lotus.png" alt=""/></div>
+    <h1>Our Team</h1>
+  </div>
+  <img src="img/ourteam_collage.jpg"> </section>
+<!--Collage end here-->
+
+<div class="whitecontarea">
+  <div class="container">
+	  <div class="text-center"><img src="img/om.png" alt="Om"/><br>
+<br></div>
+    <div class="row">
+	 <div class="col-sm-9">
+	<div class="row">
+	<div class="col-sm-4">
+	<div class="teamphoto">
+	  <img src="img/team/Kalyanji.jpg" alt=""/>
+		<h3>Mr. Kalyan Gullapalli</h3>
+		</div>	
+	</div>
+	<div class="col-sm-8 rowmargin30">
+	<div class="content2">
+		Like most Indians of his generation, Kalyan grew up under the influence of the western education system and its attitudes towards life. Academically inclined, he graduated in <strong>Metallurgical Engineering</strong> from the N.I.T, Rourkela, post-graduated in <strong>business management</strong> from S.P.J.I.M.R, Mumbai, and has had a “well-settled” career in the General Insurance industry. <br>
+<br>
+But he is essentially a restless soul. With a million dreams in his mind’s eyes, and his feet refusing to stay on the ground, he meandered through life’s mundaneness with a thousand questions in his heart. Until one day, he realized two things. One, he is a seeker. And two, he belongs to a land which pioneered the art and science of seeking. That’s when he fell in love with Bharat. <br>
+<br>
+<strong>Rediscovering Bharat</strong> is simply a reflection of his personal journey into getting to know himself and his Bharat, with a wish and a desire that all Indians start their own journeys too!
+
+	</div>	
+	</div>	
+	</div>	
+	</div> 
+	<div class="col-sm-3 rowmargin30">
+	<div class="mainheading"><h3>Other Scholars</h3></div>	
+		
+<div class="teamboxinner">	
+<a href="pro_sampadananda.html">	
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><img src="img/team/Sampadananda_Mishra.jpg" alt=""/></td>
+<td><h4>Prof. Sampadanada Mishra</h4></td>
+</tr>
+</tbody>
+</table>
+</a>	
+</div>
+		
+<div class="teamboxinner">	
+<a href="dr_sangeeta.html">	
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><img src="img/team/Dr_Sangeeta_Sharma.jpg" alt=""/></td>
+<td><h4>Dr. Sangeeta Sharma</h4></td>
+</tr>
+</tbody>
+</table>
+</a>	
+</div>
+		
+<div class="teamboxinner">	
+<a href="abhishek.html">	
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><img src="img/team/Abhisek_Panda.jpg" alt=""/></td>
+<td><h4>Mr. Abhishek Panda</h4></td>
+</tr>
+</tbody>
+</table>
+</a>	
+</div>
+	
+	<div class="teamboxinner">	
+<a href="seema.html">	
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><img src="img/team/seema_vedak.jpg" alt=""/></td>
+<td><h4>Mrs. Seema Vedaak</h4></td>
+</tr>
+</tbody>
+</table>
+</a>	
+</div>	
+		
+		
+
+		
+		
+	</div> 	
+	 </div>
+  </div>
+</div>
+
+<!--Testimonials section start here-->
+<section class="testimonialsarea">
+  <div class="container">
+    <div class=""><img src="img/testimonials_logoshape.png" class="img-responsive center-block"></div>
+    <div class="text-center">
+      <h2>Experience & Sharing</h2>
+    </div>
+    <div class="subheadingtextwhite text-center">A glimpse into spiritual experiences</div>
+    <div class="testimonialsboxarea">
+      <div class="bx-wrapper1">
+        <div class="bxslider1">
+          <div class="testimonialsbox">
+            <div class="testimonialsimg">
+              <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+              <img src="img/testimonials_img01.jpg"></div>
+            <h5>Sandesh</h5>
+            <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+              And yes, there were things I witnessed that are still unfathomable to me...</div>
+          </div>
+          <div class="testimonialsbox">
+            <div class="testimonialsimg">
+              <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+              <img src="img/testimonials_img02.jpg"></div>
+            <h5>Swati Bhatt</h5>
+            <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+              And yes, there were things I witnessed that are still unfathomable to me...</div>
+          </div>
+          <div class="testimonialsbox">
+            <div class="testimonialsimg">
+              <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+              <img src="img/testimonials_img03.jpg"></div>
+            <h5>Vijay Singh</h5>
+            <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+              And yes, there were things I witnessed that are still unfathomable to me...</div>
+          </div>
+          <div class="testimonialsbox">
+            <div class="testimonialsimg">
+              <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+              <img src="img/testimonials_img01.jpg"></div>
+            <h5>Sandesh</h5>
+            <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+              And yes, there were things I witnessed that are still unfathomable to me...</div>
+          </div>
+          <div class="testimonialsbox">
+            <div class="testimonialsimg">
+              <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+              <img src="img/testimonials_img02.jpg"></div>
+            <h5>Swati Bhatt</h5>
+            <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+              And yes, there were things I witnessed that are still unfathomable to me...</div>
+          </div>
+          <div class="testimonialsbox">
+            <div class="testimonialsimg">
+              <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+              <img src="img/testimonials_img03.jpg"></div>
+            <h5>Vijay Singh</h5>
+            <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+              And yes, there were things I witnessed that are still unfathomable to me...</div>
+          </div>
+        </div>
+      </div>
+      <div class="topmargin30 text-center"><img src="img/elephant_left.png"  alt=""/> &nbsp; <a href="testimonials.html">
+        <button type="button" class="viewallbtn">View all Experiences</button>
+        </a>
+        <button type="button" class="addreviewbtn rowmargin5" data-toggle="modal" data-target="#AddReview">Add Your Experiences</button> &nbsp; <img src="img/elephant_right.png" alt=""/>
+      </div>
+    </div>
+    <!--Testimonials Why Choose section end here--> 
+  </div>
+</section>
+<!--Testimonials end here-->
+
+<div class="whitecontarea">
+  <div class="container"> 
+    <!--Our Co-Brands section start here-->
+    
+    <div class=""><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+    <div class="mainheading text-center">
+      <h2>Our Co-Brands</h2>
+    </div>
+    <div class="row topmargin30">
+      <div class="col-sm-6">
+        <div class="antaryatrabanner"><img src="img/antaryatra_img01.jpg"></div>
+      </div>
+      <div class="col-sm-6 rowmargin30">
+        <div class="bx-wrapper2">
+          <div class="bxslider2">
+            <div class="tatvayogbanner"><a href="https://www.tatvayog.com/" target="_blank"><img src="img/tatvayogbanner_img01.jpg"></a></div>
+            <div class="tatvayogbanner"><a href="https://www.tatvayog.com/" target="_blank"><img src="img/tatvayogbanner_img01.jpg"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Our Co-Brands section end here--> 
+  </div>
+</div>
+
+<!--Footer start here-->
+<footer class="footer">
+<div class="container">
+<div class="text-center"><img src="img/footer_art.png" alt=""/></div>	
+<div class="topmargin20"><img src="img/footer_logoshape.png" class="img-responsive center-block"></div>	
+<div class="text-center topmargin15"><h6>Our Journeys</h6></div>	
+<div class="footerlinks"><a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a> | <a href="#">Journey name here 02</a> | <a href="#">Journey name here 03</a> | <a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a> | <a href="#">Journey name here 02</a> | <a href="#">Journey name here 03</a> | <a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a></div>	
+	
+<div class="footercontactarea">
+<div class="row">
+<div class="col-sm-8">
+<h6>Contact Info</h6>
+<div class="footertext">
+<ul>
+<li><span>Phone:</span> <a href="tel://+911123456789">+91 11 23456789</a></li>
+<li><span>Mobile:</span> <a href="tel://+919876543210">+91 9876543210</a></li>
+<li><span>WhatsApp:</span> <a href="#">+91 9876543210</a></li>
+<li><span>Email:</span> <a href="mailto:info@soil2soul.com">info@soil2soul.com</a></li>	
+</ul>	
+</div>	
+</div>
+<div class="col-sm-4 rowmargin20">
+<h6>Subscribe to our newsletter</h6>
+<div class="input-group">
+<input type="text" class="newslettertextfield" placeholder="Enter Email*">
+<span class="input-group-btn">
+<button class="newsletterbtn" type="button"><i class="fa fa-send"></i></button>
+</span> </div>	
+</div>	
+</div>	
+</div>	
+	
+<div class="footermenu"> <a href="default.html">Home</a> <a href="journeys.html">Journeys</a> <a href="about.html">About us</a> <a href="ourteam.html">Our Team</a> <a href="brand.html">Soil 2 Soul Brand</a> <a href="whyspiritual.html">Why Spiritual Tours?</a> <a href="sanatanadharma.html">Sanatana Dharma</a> <a href="gallery.html">Gallery</a> <a href="traveltips.html">Travel Tips</a> <a href="blogs.html">Blogs</a> <a href="testimonials.html">Testimonials</a> <a href="contact.html">Contact</a> </div>	<div class="row topmargin30">
+<div class="col-sm-4 col-xs-4">
+<div class="footertext">Powered by:</div>	
+<div class="topmargin10"><img src="img/tatva_logo.png"></div>	
+</div>
+<div class="col-sm-4 col-xs-8 center-mob-right">
+
+</div>
+<div class="col-sm-4 col-xs-12 right-mob-center">
+<div class="footertext topmargin20">
+Copyright <script>document.write(new Date().getFullYear())</script>. All Right Reserved.	
+</div>
+</div>	
+</div>
+	
+</div>		
+</footer>
+<!--Footer end here-->
+
+</main>
+
+<!-- Menu css and script start--> 
+<script type="text/javascript" src="menu/navigation.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(){				
+		$("#navigation").navigation();	
+	});
+</script> 
+<!-- Menu css and script end-->
+
+</body>
+</html>

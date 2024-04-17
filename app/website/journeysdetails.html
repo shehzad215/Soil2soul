@@ -1,0 +1,1460 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Soil2Soul</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="fonts/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="x-icon" href="favicon.ico">
+
+<!-- Menu css and script start--> 
+<script src="menu/jquery-latest.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="menu/navigation.css">
+<link rel="stylesheet" href="menu/navigation.dropdown.css">
+<!-- Menu css and script end--> 
+
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/fixednav.js"></script> 
+
+<!-- Bx css and script start-->
+<link rel="stylesheet" href="bxslider/jquery.bxslider.css">
+<script src="bxslider/jquery.bxslider.min.js"></script> 
+<script>
+	$(document).ready(function(){
+		$('.bxslider1').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 32,
+			infiniteLoop: true,
+			slideWidth: 328,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: true,
+			pager:false,
+		});	
+	});
+	
+	$(document).ready(function(){
+		$('.bxslider2').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 0,
+			infiniteLoop: false,
+			//slideWidth: 262,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: true,
+			pager:false,
+		});	       
+	});
+	
+	$(document).ready(function(){
+		$('.bxslider3').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 0,
+			infiniteLoop: false,
+			//slideWidth: 262,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: true,
+			pager:true,
+		});	       
+	});
+	
+</script> 
+<!-- Bx slider css and script end--> 
+
+<!-- Fixed Header script start--> 
+<script>
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 50) {
+        $(".topband").addClass("active");
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+        $(".topband").removeClass("active");
+    }
+});
+</script> 
+<!-- Fixed Header script end--> 
+
+<!-- Photo Gallery css start here -->
+<link href="css/gallerypopup.css" rel="stylesheet" type="text/css">
+<!-- Photo Gallery css end here -->
+    
+    
+<!-- Zoomer Script start css -->
+<!--<script src="zoom/demo.js"></script>-->
+<link href="zoom/jquery.fs.zoomer.css" rel="stylesheet" type="text/css" media="all" />
+<script src="zoom/jquery.fs.zoomer.js"></script>
+<script>
+$(document).ready(function() {
+    $(".zoomer_basic").zoomer();
+
+    $(".zoomer_custom").zoomer({
+        controls: {
+            zoomIn: ".zoomer_custom_zoom_in",
+            zoomOut: ".zoomer_custom_zoom_out"
+        },
+        customClass: "dark_zoomer",
+        increment: 0.03,
+        interval: 0.1,
+        marginMax: 50
+    });
+
+    $(".load_zoomer_tiled").one("click", function() {
+        $(this).after('<div class="zoomer_wrapper zoomer_tiled"></div>').remove();
+        $(".zoomer_tiled").zoomer({
+            source:{
+                thumbnail: "images/tiled_thumbnail.jpg",
+                tiles: [
+                    ["images/tiled_01.jpg", "images/tiled_02.jpg", "images/tiled_03.jpg", ],
+                    ["images/tiled_04.jpg", "images/tiled_05.jpg", "images/tiled_06.jpg", ],
+                    ["images/tiled_07.jpg", "images/tiled_08.jpg", "images/tiled_09.jpg", ],
+                ]
+            }
+        });
+    });
+
+    $(window).on("resize", function(e) {
+        $(".zoomer_wrapper").zoomer("resize");
+    });
+});
+</script>
+<!-- Zoomer Script and css -->    
+
+</head>
+
+<body>
+
+<!--Add Your Review Modal start here -->
+<div id="AddReview" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm"> 
+    
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Your Review</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter your email id">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Mobile / Telephone">
+        </div>
+        <div class="form-group">
+          <select class="form-controlselect">
+            <option>Nationality</option>
+            <option>India</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Your Message or Query"></textarea>
+        </div>
+        <div class="text-center">
+          <button class="submit_btn1 btnmd">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Add Your Review Modal end here --> 
+
+<!--Enquire Modal start here -->
+<div id="Enquire" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm"> 
+    
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Enquire</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter your email id">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Mobile / Telephone">
+        </div>
+        <div class="form-group">
+          <select class="form-controlselect">
+            <option>Nationality</option>
+            <option>India</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Your Message or Query"></textarea>
+        </div>
+        <div class="text-center">
+          <button class="submit_btn1 btnmd" type="button" data-toggle="modal" data-target="#myModal1">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Enquire Modal end here --> 
+
+<!--TourScholars Modal start here -->
+<div id="TourScholars" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered"> 
+    
+    <!-- Modal content-->
+    <div class="scholarmodal-content">
+      <button type="button" class="close closemodal" data-dismiss="modal">&times;</button>
+      <div class="modal-body">
+        <h4 class="scholarmodal-title">Prof. Sampadanada Mishra</h4>
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="guideimgcircle2">
+              <div class="guideleaf2"><img src="img/guideleaf.png"></div>
+              <div class="guideimg2"><img src="img/guide_img01.jpg"></div>
+            </div>
+          </div>
+          <div class="col-sm-7 rowmargin30 conte"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <strong>Excepteur sint occaecat cupidatat</strong> non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+            <br>
+            Voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, isst laborum sunt in culpa qui officia deserunt mollit anim. </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--TourScholars Modal end here -->
+
+<main class="mainwrapper"> 
+  <!--Topband start here-->
+  <header class="topband">
+    <div class="container">
+      <div class="menulogobg">
+        <div class="row nopaddingarea">
+          <div class="col-md-4 col-sm-12 col-xs-12 nopadding">
+            <div class="menu">
+              <nav id="navigation" class="navigation">
+                <div class="nav-header">
+                  <div class="nav-toggle"></div>
+                </div>
+                <div class="nav-menus-wrapper">
+                  <ul class="nav-menu">
+                    <li><a href="default.html">Home</a></li>
+                    <li><a href="journeys.html">Journeys</a></li>
+                    <li><a href="#">About</a>
+                      <ul class="nav-dropdown">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+                        <li><a href="brand.html">Soil 2 Soul Brand</a></li>
+                        <li><a href="whyspiritual.html">Why Spiritual Tours?</a></li>
+                        <li><a href="sanatanadharma.html">Sanatan Dharma</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                      </ul>
+                    </li>
+                    <li class="hidden-lg hidden-md"><a href="traveltips.html">Travel Tips</a></li>
+                    <li class="hidden-lg hidden-md"><a href="blogs.html">Blogs</a></li>
+                    <li class="hidden-lg hidden-md"><a href="testimonials.html">Testimonials</a></li>
+                    <li class="hidden-lg hidden-md"><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-9 nopadding">
+            <div class="logo"><a href="default.html"><img src="img/logolink.png" class="hidden-sm hidden-xs"><img src="img/logolink_mob.png" class="hidden-lg hidden-md"></a></div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-3 nopadding">
+            <div class="topmenu">
+              <ul>
+                <li><a href="traveltips.html">Travel Tips</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--Topband end here--> 
+  <!--Side Button start-->
+  <div class="fixedsocialicons">
+    <ul>
+      <li><a href="tel://+919876543210"><i class="fa fa-phone"></i></a></li>
+      <li><a href="https://wa919876543210" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+      <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+  </div>
+  <!--Side Button end-->
+  <div class="maincontarea"> 
+    <!--Collage start here-->
+    <section class="innercollage">
+      <div class="innerheading"> 08 Nights / 07 Days
+        <div class="headdivider"></div>
+        <h1>Discover Your Inner Rama</h1>
+        <h5>“Experience the values and virtues embodied by characters of Ramayan in our trails”</h5>
+        <h4>“Saryu Se Sagar Tak”</h4> 
+        <h6>Trail 1 - Varanasi, Prayagraj, Chitrakoot, Ayodhya</h6>   
+      </div>
+      <img src="img/journeydet_collage.jpg"> </section>
+    <!--Collage end here--> 
+    
+    <!--Fix Navbar start here-->
+    <div class="fixednavbar">
+      <nav id="nav_barfixed">
+        <ul class="nav_linksfixed">
+        <li><a href="#objective" rel="" id="anchor1" class="anchorLink">Learning Objective</a></li>
+        <li><a href="#subjectscholars" rel="" id="anchor1" class="anchorLink">Subject Scholars</a></li>
+        <li><a href="#overview" rel="" id="anchor1" class="anchorLink">Journey Overview</a></li>
+        <li><a href="#tourglimpse" rel="" id="anchor1" class="anchorLink">Tour Glimpse</a></li>
+        <li><a href="#itinerary" rel="" id="anchor1" class="anchorLink">Detailed Itinerary</a></li>
+        <li><a href="#trails" rel="" id="anchor1" class="anchorLink">Other Trails</a></li>    
+        <li><a href="#map" rel="" id="anchor1" class="anchorLink">Journey Map</a></li>
+        <li><a href="#faq" rel="" id="anchor1" class="anchorLink">FAQ's</a></li>
+        <li><a href="#reviews" rel="" id="anchor1" class="anchorLink">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Fix Navbar end here--> 
+    
+    <!--Learning objective start here-->
+    <section class="graycontarea" id="objective">
+      <div class="container">
+        <div class="mainheading text-center"><img src="img/om.png" alt="Om"/><br>
+          <br>
+          <h2>Learning Objective</h2>
+        </div>
+        <div class="ourjourneyssmalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="text-center topmargin25">
+          <div class="ourjourneyssmalltext moretext2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <p>&nbsp;</p>
+          </div>
+          <img src="img/elephant_left.png"  alt=""/> &nbsp; <a href="javascript:void()">
+          <button type="button" class="viewallbtn moreless-button2">Learn More</button>
+          </a> &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+      </div>
+    </section>
+    <!--Learning objective end here-->
+    
+    <div class="whitecontarea">
+      <div class="container"> 
+        
+        <!--Our Tour Scholar start here-->
+        <div class="" id="subjectscholars"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+        <div class="mainheading text-center">
+          <h2>Our Tour Scholars</h2>
+        </div>
+        <div class="scholarboxcontarea">
+          <div class="bx-wrapper1 topmargin40">
+            <div class="bxslider1">
+              <div class="scholarboxcont"> <a href="#" data-toggle="modal" data-target="#TourScholars">
+                <div class="scholarbox">
+                  <div class="guideimgcircle">
+                    <div class="guideleaf"><img src="img/guideleaf.png"></div>
+                    <div class="guideimg"><img src="img/guide_img01.jpg"></div>
+                  </div>
+                  <div class="text-center topmargin25 guidename">Prof. Sampadanada Mishra</div>
+                  <div class="text-center topmargin10">Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore...</div>
+                  <div class="topmargin25 text-center"> <img src="img/elephant_left.png"  alt=""/> &nbsp;
+                    <button type="button" class="viewallbtn">Read More</button>
+                    &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+                </div>
+                </a> </div>
+              <div class="scholarboxcont"> <a href="#" data-toggle="modal" data-target="#TourScholars">
+                <div class="scholarbox">
+                  <div class="guideimgcircle">
+                    <div class="guideleaf"><img src="img/guideleaf.png"></div>
+                    <div class="guideimg"><img src="img/guide_img03.jpg"></div>
+                  </div>
+                  <div class="text-center topmargin25 guidename">Prof. Sampadanada Mishra</div>
+                  <div class="text-center topmargin10">Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore...</div>
+                  <div class="topmargin25 text-center"> <img src="img/elephant_left.png"  alt=""/> &nbsp;
+                    <button type="button" class="viewallbtn">Read More</button>
+                    &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+                </div>
+                </a> </div>
+              <div class="scholarboxcont"> <a href="#" data-toggle="modal" data-target="#TourScholars">
+                <div class="scholarbox">
+                  <div class="guideimgcircle">
+                    <div class="guideleaf"><img src="img/guideleaf.png"></div>
+                    <div class="guideimg"><img src="img/guide_img04.jpg"></div>
+                  </div>
+                  <div class="text-center topmargin25 guidename">Prof. Sampadanada Mishra</div>
+                  <div class="text-center topmargin10">Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore...</div>
+                  <div class="topmargin25 text-center"> <img src="img/elephant_left.png"  alt=""/> &nbsp;
+                    <button type="button" class="viewallbtn">Read More</button>
+                    &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+                </div>
+                </a> </div>
+              <div class="scholarboxcont"> <a href="#" data-toggle="modal" data-target="#TourScholars">
+                <div class="scholarbox">
+                  <div class="guideimgcircle">
+                    <div class="guideleaf"><img src="img/guideleaf.png"></div>
+                    <div class="guideimg"><img src="img/guide_img05.jpg"></div>
+                  </div>
+                  <div class="text-center topmargin25 guidename">Prof. Sampadanada Mishra</div>
+                  <div class="text-center topmargin10">Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore...</div>
+                  <div class="topmargin25 text-center"> <img src="img/elephant_left.png"  alt=""/> &nbsp;
+                    <button type="button" class="viewallbtn">Read More</button>
+                    &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+                </div>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+        <!--Our Tour Scholar end here--> 
+        
+        <!--Journey Overview start here-->
+        <div class="topmargin60" id="overview"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+        <div class="mainheading text-center">
+          <h2>Journey Overview</h2>
+        </div>
+        <div class="row topmargin30">
+          <div class="col-md-8"> 
+            
+            <!--Photo Gallery start here-->
+            <div class="" id="PhotoGallery">
+              <div class="row">
+                <div class="col-xs-7">
+                  <div class="mainheading">
+                    <h4>Photo Gallery</h4>
+                  </div>
+                </div>
+                <div class="col-xs-5 text-right">
+                  <div class="seeallphotostext"><a href="javascript:void(0);" onclick="openModal();currentSlide(1)">See all Photos</a></div>
+                </div>
+              </div>
+              
+              <!-- Gallery images start here-->
+              <div class="row nopaddingarea">
+                <div class="col-xs-7 nopadding2">
+                  <div class="photogalleryimg"><img src="img/p1.jpg" onclick="openModal();currentSlide(1)" class="cursor"></div>
+                </div>
+                <div class="col-xs-5 nopadding2">
+                  <div class="photogalleryimg"><img src="img/p2.jpg" onclick="openModal();currentSlide(2)" class="cursor"></div>
+                </div>
+                <div class="col-xs-4 nopadding2">
+                  <div class="photogalleryimg"><img src="img/p3.jpg" onclick="openModal();currentSlide(3)" class="cursor"></div>
+                </div>
+                <div class="col-xs-4 nopadding2">
+                  <div class="photogalleryimg"><img src="img/p4.jpg" onclick="openModal();currentSlide(4)" class="cursor"></div>
+                </div>
+                <div class="col-xs-4 nopadding2">
+                  <div class="photogalleryimg"><img src="img/p5.jpg" onclick="openModal();currentSlide(5)" class="cursor"></div>
+                </div>
+                <div class="col-xs-5 nopadding2">
+                  <div class="photogalleryimg"><img src="img/p6.jpg" onclick="openModal();currentSlide(6)" class="cursor"></div>
+                </div>
+                <div class="col-xs-7 nopadding2">
+                  <div class="photogalleryimg"><img src="img/p7.jpg" onclick="openModal();currentSlide(7)" class="cursor"></div>
+                </div>
+              </div>
+              <!-- Gallery images end here--> 
+              
+              <!-- Gallery Popup start here-->
+              <div id="myModalgallery" class="modalgallery"> <span class="closegallery cursor" onclick="closeModal()">&times;</span>
+                <div class="modalgallery-content">
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 7</div>
+                    <img src="img/p1.jpg"> </div>
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 7</div>
+                    <img src="img/p2.jpg"> </div>
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 7</div>
+                    <img src="img/p3.jpg"> </div>
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 7</div>
+                    <img src="img/p4.jpg"> </div>
+                  <div class="mySlides">
+                    <div class="numbertext">5 / 7</div>
+                    <img src="img/p5.jpg"> </div>
+                  <div class="mySlides">
+                    <div class="numbertext">6 / 7</div>
+                    <img src="img/p6.jpg"> </div>
+                  <div class="mySlides">
+                    <div class="numbertext">7 / 7</div>
+                    <img src="img/p7.jpg"> </div>
+                  <a class="prevgallery" onclick="plusSlides(-1)">&#10094;</a> <a class="nextgallery" onclick="plusSlides(1)">&#10095;</a>
+                  <div class="caption-container">
+                    <p id="caption"></p>
+                  </div>
+                  <div class="thumbnails"> <img class="demo cursor" src="img/p1.jpg" onclick="currentSlide(1)" alt=""> <img class="demo cursor" src="img/p2.jpg" onclick="currentSlide(2)" alt=""> <img class="demo cursor" src="img/p3.jpg" onclick="currentSlide(3)" alt=""> <img class="demo cursor" src="img/p4.jpg" onclick="currentSlide(4)" alt=""> <img class="demo cursor" src="img/p5.jpg" onclick="currentSlide(5)" alt=""> <img class="demo cursor" src="img/p6.jpg" onclick="currentSlide(6)" alt=""> <img class="demo cursor" src="img/p7.jpg" onclick="currentSlide(7)" alt=""></div>
+                </div>
+              </div>
+              <!-- Gallery Popup end here--> 
+            </div>
+            <!--Photo Gallery end here--> 
+          </div>
+          <div class="col-md-4 extpaddleft">
+            <div class="mainheading">
+              <h4>Video</h4>
+            </div>
+            <div class="topmargin10">
+              <iframe width="100%" height="290" src="https://www.youtube.com/embed/cxlIUOMUrS4?si=guPESQSBowUgL9Bh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="topmargin30">
+              <iframe width="100%" height="290" src="https://www.youtube.com/embed/zuLuOxDktKg?si=yBYNOGH6QOVN8yZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <!--Journey Overview end here--> 
+        
+        <!--Tour Glimpse start here-->
+        <div class="topmargin60" id="tourglimpse"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+        <div class="mainheading text-center">
+          <h2>Tour Glimpse</h2>
+        </div>
+        <div class="tourinfolist topmargin30">
+          <ul>
+            <li>
+              <div class="infobox">
+                <h4><img src="img/nights.png" alt=""/> Duration</h4>
+                <strong>04 Nights / 05 Days</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+            </li>
+            <li>
+              <div class="infobox">
+                <h4><img src="img/cities.png" alt=""/> Destinations Covered</h4>
+                Varanasi - Temple Tour - Sarnath - Pushkar Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </div>
+            </li>
+            <li>
+              <div class="infobox">
+                <h4><img src="img/hotel.png" alt=""/> Unique Hotels</h4>
+                <ul>
+                  <li>Varanasi: - <strong>Aashirwad Inn</strong> / Similar (Budget)</li>
+                  <li>Sarnath: - <strong>Yelchiko </strong> / Similar (4 Star)</li>
+                  <li>Pushkar: - <strong>Madin </strong> / Similar (4 Star)</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="infobox">
+                <h4><img src="img/meals.png" alt=""/> Meals</h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+            </li>
+            <li>
+              <div class="infobox">
+                <h4><img src="img/activities.png" alt=""/> Activities</h4>
+                <ul>
+                  <li>Lorem ipsum dolor sit amet, consectetur</li>
+                  <li>Incididunt ut labore et incididunt</li>
+                  <li>Sed do eiusmod tempor incididunt ut laborer</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="infobox">
+                <h4><img src="img/language.png" alt=""/> Language</h4>
+                हिंदी,&nbsp; ગુજરાતી,&nbsp; English </div>
+            </li>
+          </ul>
+        </div>
+        <!--Tour Glimpse end here--> 
+        
+        <!--Details itinerary  start here-->
+        <div class="topmargin60" id="itinerary"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+        <div class="mainheading text-center">
+          <h2>Detailed Itinerary</h2>
+        </div>
+        <div class="row topmargin30">
+          <div class="col-md-9">
+            <div class="panel-group" id="accordion2"> 
+              <!-- day1 start -->
+              <div class="panel3 panel-default"> <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion2" href="#day1">
+                <div class="panel-heading2">
+                  <div class="panel-title3">Day 01: Arrival to Barkot, Stay in Hotel</div>
+                </div>
+                </a>
+                <div id="day1" class="panel-collapse collapse in">
+                  <div class="newpanel-body">
+                    <ul>
+                      <li>The Pickup timing is 7am near Haridwar Railway Station.</li>
+                      <li>The journey goes through rishikesh which is called gateway of Himalayas and first city to enter gadhwal region.</li>
+                      <li>The Duration takes 6 to 7 hour to reach badkot and company will provideaccommodation at Badkot city.</li>
+                      <div class="topmargin15">Meals: <strong>Breakfast, Lunch, Dinner</strong></div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- day1 end --> 
+              
+              <!-- day2 start -->
+              <div class="panel3 panel-default"> <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion2" href="#day2">
+                <div class="panel-heading2">
+                  <div class="panel-title3">Day 02: Visit to Yamunotri Dham</div>
+                </div>
+                </a>
+                <div id="day2" class="panel-collapse collapse">
+                  <div class="newpanel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- day2 end --> 
+              
+              <!-- day3 start -->
+              <div class="panel3 panel-default"> <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion2" href="#day3">
+                <div class="panel-heading2">
+                  <div class="panel-title3">Day 03: Barkot to Uttarakashi</div>
+                </div>
+                </a>
+                <div id="day3" class="panel-collapse collapse">
+                  <div class="newpanel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- day3 end --> 
+              
+              <!-- day4 start -->
+              <div class="panel3 panel-default"> <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion2" href="#day4">
+                <div class="panel-heading2">
+                  <div class="panel-title3">Day 04: Uttarakashi to Gangotri</div>
+                </div>
+                </a>
+                <div id="day4" class="panel-collapse collapse">
+                  <div class="newpanel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- day4 end --> 
+              
+              <!-- day5 start -->
+              <div class="panel3 panel-default"> <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion2" href="#day5">
+                <div class="panel-heading2">
+                  <div class="panel-title3">Day 05: Uttarakashi to Guptkashi</div>
+                </div>
+                </a>
+                <div id="day5" class="panel-collapse collapse">
+                  <div class="newpanel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- day5 end --> 
+              
+              <!-- day6 start -->
+              <div class="panel3 panel-default"> <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion2" href="#day6">
+                <div class="panel-heading2">
+                  <div class="panel-title3">Day 06: Guptkashi to Kedarnath</div>
+                </div>
+                </a>
+                <div id="day6" class="panel-collapse collapse">
+                  <div class="newpanel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- day6 end --> 
+              
+            </div>
+            <div class="topmargin60">
+				
+				<div class="panel3 panel-default tourcostpanel"> <a class="accordion-toggle2 collapsed " data-toggle="collapse" data-parent="#accordion2" href="#tourcost">
+                <div class="panel-heading2">
+                  <div class="panel-title3" style="color: #673400">Tour Cost</div>
+                </div>
+                </a>
+                <div id="tourcost" class="panel-collapse collapse">
+                  <div class="newpanel-body"><div class="table-responsive tourcosttbl">
+					<table width="100%" class="table">
+						<thead>
+						<tr>
+						  <th>Departure Dates</th>
+						  <th>Double/Twin</th>
+						  <th>Triple</th>
+						  <th>Child Sharing (2-9)</th>
+						  <th>Child Own Room (10-18)</th>	
+						  <th>Single Supliment</th>	
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>12 Jan 2024</td>
+						  <td>INR 15000</td>
+						  <td>INR 13000</td>
+						  <td>INR 15000</td>
+						  <td>INR 5000</td>
+						  <td>INR 8000</td>	
+						</tr>
+						  <tr>
+						  <td>26 Jan 2024</td>
+						  <td>INR 15000</td>
+						  <td>INR 13000</td>
+						  <td>INR 15000</td>
+						  <td>INR 5000</td>
+						  <td>INR 8000</td>	  
+						</tr>
+						  <tr>
+						  <td>04 Mar 2024</td>
+						  <td>INR 15000</td>
+						  <td>INR 13000</td>
+						  <td>INR 15000</td>
+						  <td>INR 5000</td>
+						  <td>INR 8000</td>	  
+						</tr>
+						  <tr>
+						  <td>20 Mar 2024</td>
+						  <td>INR 15000</td>
+						  <td>INR 13000</td>
+						  <td>INR 15000</td>
+						  <td>INR 5000</td>
+						  <td>INR 8000</td>	  
+						</tr>
+						  <tr>
+						  <td>06 Feb 2024</td>
+						  <td>INR 15000</td>
+						  <td>INR 13000</td>
+						  <td>INR 15000</td>
+						  <td>INR 5000</td>
+						  <td>INR 8000</td>	  
+						</tr>
+					  </tbody>
+					</table>
+
+					</div></div>
+                </div>
+              </div>
+                
+                <div class="panel3 panel-default tourcostpanel"> <a class="accordion-toggle2 collapsed " data-toggle="collapse" data-parent="#accordion2" href="#hotels">
+                <div class="panel-heading2">
+                  <div class="panel-title3" style="color: #673400">Hotels</div>
+                </div>
+                </a>
+                <div id="hotels" class="panel-collapse collapse">
+                  <div class="newpanel-body">
+                    <div class="row">
+                    <div class="col-sm-6">
+                    <div class="hotelbox">
+                    <div class="row">
+                    <div class="col-xs-4">
+                      <img src="img/blogcat_img07.jpg" alt=""/> </div>
+                    <div class="col-xs-8">
+                    <h4>Hotel Name Here</h4>  
+                    <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div> 
+                    <div class="location"><i class="fa fa-map-marker"></i> Ayodhya</div>    
+                    </div>    
+                    </div>    
+                    </div>    
+                    </div>
+                    <div class="col-sm-6">
+                    <div class="hotelbox">
+                    <div class="row">
+                    <div class="col-xs-4">
+                      <img src="img/blogcat_img07.jpg" alt=""/> </div>
+                    <div class="col-xs-8">
+                    <h4>Hotel Name Here</h4>  
+                    <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div> 
+                    <div class="location"><i class="fa fa-map-marker"></i> Ayodhya</div>    
+                    </div>    
+                    </div>    
+                    </div>    
+                    </div>    
+                    </div>
+                    </div>
+                </div>
+              </div>
+				
+              
+            </div>
+            <div class="topmargin60 row">
+              <div class="col-sm-6">
+                <div class="inclusions">
+                  <h4>Inclusions</h4>
+                  <ul>
+                    <li>Daily Breakfast</li>
+                    <li>6 Nights Hotel Accommodation</li>
+                    <li>All transportation in destination location</li>
+                    <li>English Speaking Driver</li>
+                    <div class="moretext">
+                      <li>Lorem dolor ipsum location</li>
+                      <li>Sit amet speaking driver</li>
+                    </div>
+                    <a href="javascript:void()" class="moreless-button">+ 2 more</a>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="exclusions">
+                  <h4>Exclusions</h4>
+                  <ul>
+                    <li>Air Fare</li>
+                    <li>Any Private Expenses</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"> 
+            <!-- Price Box Start -->
+            <div class="pricebox">
+              <div class="priceboxcont">
+                <h3>Departure Dates</h3>
+                <div class="row">
+                  <div class="col-xs-5 available">
+                    <div></div>
+                    Available</div>
+                  <div class="col-xs-7 notavailable">
+                    <div></div>
+                    Not Available</div>
+                </div>
+                <div class="availstatus">
+                  <ul>
+                    <li><a href="#" class="tournotavailable">12 Jan 2024</a></li>
+                    <li><a href="#" class="touravailable">26 Jan 2024</a></li>
+                    <li><a href="#" class="tourselected">06 Feb 2024</a></li>
+                    <li><a href="#" class="touravailable">04 Mar 2024</a></li>
+                    <li><a href="#" class="touravailable">20 Mar 2024</a></li>
+                  </ul>
+                </div>
+                <hr style="padding: 0px; margin: 5px 0px;" />
+                <div class=""> Selected Date: <span class="selecteddate">06 Feb 2024</span> </div>
+              </div>
+              <div class="journeypricebox">
+                <div class="row">
+                  <div class="col-xs-6"> Journey Cost:
+                    <div class="price"><span>INR</span> 15000</div>
+                    <span class="price_pp">per person</span> </div>
+                  <div class="col-xs-6 text-right"> Change Currency
+                    <select class="currencyselect">
+                      <option>INR</option>
+                      <option>USD</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="priceboxcont"> No. of Travellers:
+                <div class="row">
+                  <div class="col-xs-6">
+                    <select class="currencyselect">
+                      <option>Adult</option>
+                      <option>1</option>
+                      <option selected>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="col-xs-6">
+                    <select class="currencyselect">
+                      <option>Child</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="totalpricebox"> Total Journey Cost:
+                <div class="totalprice"><span>INR</span> 30000 &nbsp;&nbsp; <span class="pricebreakup"><a href="#">Price breakup</a></span></div>
+              </div>
+              <div class="priceboxcont">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <button type="button" class="submit_btn2 btnlg btnlgfullwidth" data-toggle="modal" data-target="#Enquire">Enquire</button>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <button type="button" class="submit_btn1 btnlg btnlgfullwidth">Book</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Price Box End -->
+            
+            <div class="sharetour"> Share this Journey: <a href="#"><img src="img/whatsapp.png" alt=""/></a> <a href="#"><img src="img/faceb.png" alt=""/></a> <a href="#"><img src="img/insta.png" alt=""/></a> </div>
+            <div class="whyusboxinner">
+              <h3>Why Book with us?</h3>
+              <div class="whyboxcont affordablejourneysbox">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="50"><div class="whybookicon"><img src="img/scholar_led.png"> </div></td>
+                      <td><div class="">
+                          <h5>Scholar Led</h5>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="whyboxcont guidedexperiencesbox">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="50"><div class="whybookicon"><img src="img/daily_programs.png"> </div></td>
+                      <td><div class="">
+                          <h5>Immersive Daily
+                            Programs</h5>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="whyboxcont accomodationbox">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="50"><div class="whybookicon"><img src="img/inner_transformation.png"> </div></td>
+                      <td><div class="">
+                          <h5>Inner Transformation</h5>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="whyboxcont bestvalueitinerarybox">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="50"><div class="whybookicon"><img src="img/daily_yoga.png"> </div></td>
+                      <td><div class="">
+                          <h5>Daily Yoga and
+                            Meditation Practises</h5>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="whyboxcont responsibletourismbox">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="50"><div class="whybookicon"><img src="img/luxurious_touring.png"> </div></td>
+                      <td><div class="">
+                          <h5>Luxurious Touring
+                            Facility</h5>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="whyboxcont guestsupportbox">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="50"><div class="whybookicon"><img src="img/culture_india.png"> </div></td>
+                      <td><div class="">
+                          <h5>Culture of India</h5>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--Details itinerary  end here--> 
+          
+          
+          <div class="" id="trails"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+          <div class="mainheading text-center">
+          <h2>Other Trails</h2>
+        </div>
+          
+          <div class="traillist topmargin30">
+          <ul>
+            <li><a href="#">
+              <div class="trailbox">
+                <h6>Trail 02</h4>
+                Varanasi, Prayagraj, Chitrakoot, Ayodhaya
+                  <div class="traillink"><i class="fa fa-chevron-circle-right"></i></div>
+                </div>
+                </a> 
+            </li>
+            <li><a href="#">
+              <div class="trailbox">
+                <h6>Trail 03</h4>
+                Varanasi, Prayagraj, Chitrakoot, Ayodhaya
+                  <div class="traillink"><i class="fa fa-chevron-circle-right"></i></div>
+                </div>
+                </a> 
+            </li>
+              <li><a href="#">
+              <div class="trailbox">
+                <h6>Trail 04</h4>
+                Varanasi, Prayagraj, Chitrakoot, Ayodhaya
+                  <div class="traillink"><i class="fa fa-chevron-circle-right"></i></div>
+                </div>
+                </a> 
+            </li>
+          </ul>
+        </div>
+          
+        
+        <!--Journey map start here-->
+        <div class="topmargin60" id="map"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+        <div class="mainheading text-center">
+          <h2>Journey Map</h2>
+        </div>
+        <div class="topmargin30">
+        <div class="transfertype">
+        <span class="road">By Road <i class="fa fa-cab"></i></span>    <span class="air">By Air  <i class="fa fa-plane"></i></span>    <span class="rail">By Rail  <i class="fa fa-train"></i></span>    
+        </div>    
+          <div class="zoomer_wrapper zoomer_basic"> <img src="img/trailsmap/ramayan_trail1.jpg" /> </div>
+        </div>
+        
+        <!--Journey map end here--> 
+        
+      </div>
+    </div>
+      
+      <div class="container">
+	
+<div class="">	
+<div class="topmargin40"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>	
+<div class="mainheading text-center"><h2>Journeys You May Like</h2></div>	
+</div>	
+<div class="">	
+<div class="row topmargin30">
+<div class="col-sm-3">
+<div class="ourjourneysbox">
+<a href="journeysdetails.html">
+<div class="ourjourneysboximg">
+<div class="trailtag"><span>03</span><br> Trails</div>    
+<img src="img/ourjourneys_img01.jpg">
+<div class="details ourjourneysboxbg01">
+<div class="ourjourneysboxcont">
+<h4>Discover Your Inner Rama</h4>
+<div class="ourjourneysboxcontdes">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis and sages throughout centuries and experience the sacred energies of...</div>    
+<div class="ourjourneysboxhidecont"><span>04 Nights</span> Departure Dates: 05 Jan / 20 Jan / 10 Feb</div>    
+</div>
+</div>
+</div>
+</a>
+</div>	
+</div>	
+<div class="col-sm-3">
+<div class="ourjourneysbox">
+<a href="journeysdetails.html">
+<div class="ourjourneysboximg">
+<div class="trailtag"><span>03</span><br> Trails</div>    
+<img src="img/ourjourneys_img02.jpg">
+<div class="details ourjourneysboxbg01">
+<div class="ourjourneysboxcont">
+<h4>Mystical Varanasi Pilgrimage</h4>
+<div class="ourjourneysboxcontdes">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis...</div>    
+<div class="ourjourneysboxhidecont"><span>04 Nights</span> Departure Dates: 05 Jan / 20 Jan / 10 Feb</div>    
+</div>
+</div>
+</div>
+</a>
+</div>	
+</div>	
+<div class="col-sm-3">
+<div class="ourjourneysbox">
+<a href="journeysdetails.html">
+<div class="ourjourneysboximg">
+<div class="trailtag"><span>04</span><br> Trails</div>    
+<img src="img/ourjourneys_img03.jpg">
+<div class="details ourjourneysboxbg01">
+<div class="ourjourneysboxcont">
+<h4>Mystical Varanasi Pilgrimage</h4>
+<div class="ourjourneysboxcontdes">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis...</div>    
+<div class="ourjourneysboxhidecont"><span>04 Nights</span> Departure Dates: 05 Jan / 20 Jan / 10 Feb</div>    
+</div>
+</div>
+</div>
+</a>
+</div>	
+</div>
+<div class="col-sm-3">
+<div class="ourjourneysbox">
+<a href="journeysdetails.html">
+<div class="ourjourneysboximg">
+<div class="trailtag"><span>02</span><br> Trails</div>    
+<img src="img/ourjourneys_img04.jpg">
+<div class="details ourjourneysboxbg01">
+<div class="ourjourneysboxcont">
+<h4>Buddhist Tour from Varanasi to Gorakhpur</h4>
+<div class="ourjourneysboxcontdes">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis and sages throughout centuries and experience the sacred energies of...</div>    
+<div class="ourjourneysboxhidecont"><span>04 Nights</span> Departure Dates: 05 Jan / 20 Jan / 10 Feb</div>    
+</div>
+</div>
+</div>
+</a>
+</div>	
+</div>
+</div>	
+</div>	
+
+<div class="">		
+<div class="text-center"><img src="img/elephant_left.png"  alt=""/> &nbsp; <a href="journeys.html"><button type="button" class="viewallbtn">View all Journeys</button></a> &nbsp;  <img src="img/elephant_right.png"  alt=""/> </div>
+</div>	
+</div>
+    
+    <!--Journey FAQs section end here-->
+    <section class="graycontarea topmargin50" id="faq">
+      <div class="container">
+        <div class=""><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+        <div class="mainheading text-center">
+          <h2>Journey FAQs</h2>
+        </div>
+        <div class="row topmargin40">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="panel-group" id="accordion2"> 
+              <!-- faq1 start -->
+              <div class="panel2 panel-default"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#faq1">
+                <div class="panel-heading2">
+                  <div class="panel-title">What is the price of the journey?</div>
+                </div>
+                </a>
+                <div id="faq1" class="panel-collapse collapse">
+                  <div class="panel-body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- faq1 end --> 
+              
+              <!-- faq2 start -->
+              <div class="panel2 panel-default"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#faq2">
+                <div class="panel-heading2">
+                  <div class="panel-title">Am I the right age to come on this journey?</div>
+                </div>
+                </a>
+                <div id="faq2" class="panel-collapse collapse">
+                  <div class="panel-body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- faq2 end --> 
+              
+              <!-- faq3 start -->
+              <div class="panel2 panel-default"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#faq3">
+                <div class="panel-heading2">
+                  <div class="panel-title">Do I have to have certain spiritual beliefs to come on this journey?</div>
+                </div>
+                </a>
+                <div id="faq3" class="panel-collapse collapse">
+                  <div class="panel-body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat.</div>
+                </div>
+              </div>
+              <!-- faq3 end --> 
+              
+              <!-- faq4 start -->
+              <div class="panel2 panel-default"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#faq4">
+                <div class="panel-heading2">
+                  <div class="panel-title">I'm planning to travel by myself. Is there anything I should know?</div>
+                </div>
+                </a>
+                <div id="faq4" class="panel-collapse collapse">
+                  <div class="panel-body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat.</div>
+                </div>
+              </div>
+              <!-- faq4 end --> 
+              
+              <!-- faq5 start -->
+              <div class="panel2 panel-default"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#faq5">
+                <div class="panel-heading2">
+                  <div class="panel-title">How many people will be on this journey?</div>
+                </div>
+                </a>
+                <div id="faq5" class="panel-collapse collapse">
+                  <div class="panel-body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat.</div>
+                </div>
+              </div>
+              <!-- faq5 end --> 
+              
+              <!-- faq6 start -->
+              <div class="panel2 panel-default"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#faq6">
+                <div class="panel-heading2">
+                  <div class="panel-title">What will the weather be like?</div>
+                </div>
+                </a>
+                <div id="faq6" class="panel-collapse collapse">
+                  <div class="panel-body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- faq6 end --> 
+              
+              <!-- faq7 start -->
+              <div class="panel2 panel-default"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#faq7">
+                <div class="panel-heading2">
+                  <div class="panel-title">What should I pack?</div>
+                </div>
+                </a>
+                <div id="faq7" class="panel-collapse collapse">
+                  <div class="panel-body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed augue tellus. Nullam tincidunt sem eget lacus rutrum efficitur. Donec convallis accumsan dolor ut varius. Donec fermentum diam a dolor condimentum iaculis. Maecenas placerat maximus felis eu vestibulum. Mauris sollicitudin, nisi nec auctor pharetra, purus neque tincidunt dui, nec egestas orci arcu sit amet nibh. Phasellus sed nulla ut odio consectetur vulputate. Maecenas porttitor efficitur consequat. </div>
+                </div>
+              </div>
+              <!-- faq7 end --> 
+              
+            </div>
+          </div>
+        </div>
+        <div class="text-center topmargin20"><img src="img/elephant_left.png"  alt=""/> &nbsp; <a href="faqs.html">
+          <button type="button" class="viewallbtn">View more FAQs</button>
+          </a> &nbsp; <img src="img/elephant_right.png"  alt=""/></div>
+      </div>
+    </section>
+    <!--Journey FAQs section end here--> 
+    
+    <!--Testimonials section start here-->
+    <section class="testimonialsarea" id="reviews">
+      <div class="container">
+        <div class=""><img src="img/testimonials_logoshape.png" class="img-responsive center-block"></div>
+        <div class="text-center">
+          <h2>Experience & Sharing</h2>
+        </div>
+        <div class="subheadingtextwhite text-center">A glimpse into spiritual experiences</div>
+        <div class="testimonialsboxarea">
+          <div class="bx-wrapper1">
+            <div class="bxslider1">
+              <div class="testimonialsbox">
+                <div class="testimonialsimg">
+                  <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+                  <img src="img/testimonials_img01.jpg"></div>
+                <h5>Sandesh</h5>
+                <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+                  And yes, there were things I witnessed that are still unfathomable to me...</div>
+              </div>
+              <div class="testimonialsbox">
+                <div class="testimonialsimg">
+                  <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+                  <img src="img/testimonials_img02.jpg"></div>
+                <h5>Swati Bhatt</h5>
+                <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+                  And yes, there were things I witnessed that are still unfathomable to me...</div>
+              </div>
+              <div class="testimonialsbox">
+                <div class="testimonialsimg">
+                  <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+                  <img src="img/testimonials_img03.jpg"></div>
+                <h5>Vijay Singh</h5>
+                <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+                  And yes, there were things I witnessed that are still unfathomable to me...</div>
+              </div>
+              <div class="testimonialsbox">
+                <div class="testimonialsimg">
+                  <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+                  <img src="img/testimonials_img01.jpg"></div>
+                <h5>Sandesh</h5>
+                <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+                  And yes, there were things I witnessed that are still unfathomable to me...</div>
+              </div>
+              <div class="testimonialsbox">
+                <div class="testimonialsimg">
+                  <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+                  <img src="img/testimonials_img02.jpg"></div>
+                <h5>Swati Bhatt</h5>
+                <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+                  And yes, there were things I witnessed that are still unfathomable to me...</div>
+              </div>
+              <div class="testimonialsbox">
+                <div class="testimonialsimg">
+                  <div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>
+                  <img src="img/testimonials_img03.jpg"></div>
+                <h5>Vijay Singh</h5>
+                <div class="testimonialstext">Each and every place that we visited has its own reverberations.
+                  And yes, there were things I witnessed that are still unfathomable to me...</div>
+              </div>
+            </div>
+          </div>
+          <div class="topmargin30 text-center"><img src="img/elephant_left.png"  alt=""/> &nbsp; <a href="testimonials.html">
+            <button type="button" class="viewallbtn">View all Experiences</button>
+            </a>
+            <button type="button" class="addreviewbtn rowmargin5" data-toggle="modal" data-target="#AddReview">Add Your Experiences</button>
+            &nbsp; <img src="img/elephant_right.png"  alt=""/></div>
+        </div>
+        <!--Testimonials Why Choose section end here--> 
+      </div>
+    </section>
+    <!--Testimonials end here--> 
+    
+  </div>
+  <div class="whitecontarea">
+    <div class="container"> 
+      <!--Our Co-Brands section start here-->
+      
+      <div class=""><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>
+      <div class="mainheading text-center">
+        <h2>Our Co-Brands</h2>
+      </div>
+      <div class="row topmargin30">
+        <div class="col-sm-6">
+          <div class="antaryatrabanner"><img src="img/antaryatra_img01.jpg"></div>
+        </div>
+        <div class="col-sm-6 rowmargin30">
+          <div class="bx-wrapper2">
+            <div class="bxslider2">
+              <div class="tatvayogbanner"><a href="https://www.tatvayog.com/" target="_blank"><img src="img/tatvayogbanner_img01.jpg"></a></div>
+              <div class="tatvayogbanner"><a href="https://www.tatvayog.com/" target="_blank"><img src="img/tatvayogbanner_img01.jpg"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--Our Co-Brands section end here--> 
+    </div>
+  </div>
+  
+  <!--Footer start here-->
+  <footer class="footer">
+    <div class="container">
+      <div class="text-center"><img src="img/footer_art.png" alt=""/></div>
+      <div class="topmargin20"><img src="img/footer_logoshape.png" class="img-responsive center-block"></div>
+      <div class="text-center topmargin15">
+        <h6>Our Journeys</h6>
+      </div>
+      <div class="footerlinks"><a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a> | <a href="#">Journey name here 02</a> | <a href="#">Journey name here 03</a> | <a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a> | <a href="#">Journey name here 02</a> | <a href="#">Journey name here 03</a> | <a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a></div>
+      <div class="footercontactarea">
+        <div class="row">
+          <div class="col-sm-8">
+            <h6>Contact Info</h6>
+            <div class="footertext">
+              <ul>
+                <li><span>Phone:</span> <a href="tel://+911123456789">+91 11 23456789</a></li>
+                <li><span>Mobile:</span> <a href="tel://+919876543210">+91 9876543210</a></li>
+                <li><span>WhatsApp:</span> <a href="#">+91 9876543210</a></li>
+                <li><span>Email:</span> <a href="mailto:info@soil2soul.com">info@soil2soul.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4 rowmargin20">
+            <h6>Subscribe to our newsletter</h6>
+            <div class="input-group">
+              <input type="text" class="newslettertextfield" placeholder="Enter Email*">
+              <span class="input-group-btn">
+              <button class="newsletterbtn" type="button"><i class="fa fa-send"></i></button>
+              </span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="footermenu"> <a href="default.html">Home</a> <a href="journeys.html">Journeys</a> <a href="about.html">About us</a> <a href="ourteam.html">Our Team</a> <a href="brand.html">Soil 2 Soul Brand</a> <a href="whyspiritual.html">Why Spiritual Tours?</a> <a href="sanatanadharma.html">Sanatana Dharma</a> <a href="gallery.html">Gallery</a> <a href="traveltips.html">Travel Tips</a> <a href="blogs.html">Blogs</a> <a href="testimonials.html">Testimonials</a> <a href="contact.html">Contact</a> </div>
+      <div class="row topmargin30">
+        <div class="col-sm-4 col-xs-4">
+          <div class="footertext">Powered by:</div>
+          <div class="topmargin10"><img src="img/tatva_logo.png"></div>
+        </div>
+        <div class="col-sm-4 col-xs-8 center-mob-right"> </div>
+        <div class="col-sm-4 col-xs-12 right-mob-center">
+          <div class="footertext topmargin20"> Copyright <script>document.write(new Date().getFullYear())</script>. All Right Reserved. </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--Footer end here--> 
+  
+</main>
+
+<!-- Menu css and script start--> 
+<script type="text/javascript" src="menu/navigation.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(){				
+		$("#navigation").navigation();	
+	});
+</script> 
+<!-- Menu css and script end--> 
+<!-- Fixed Bar Script Start Here --> 
+<script>
+    $('.nav_linksfixed a[href^="#"]').on('click', function(event) {
+
+    var target = $(this.getAttribute('href'));
+	var removeOffset=0;
+	if($('#nav_barfixed').hasClass("fixed2")){
+		removeOffset=190;
+	}else{
+		removeOffset= 190;
+	}
+	
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: eval(target.offset().top) - eval(removeOffset)
+        }, 700);
+		
+    }
+
+});
+  //# sourceURL=pen.js
+  
+$(function() {
+    var top = $('#nav_barfixed').offset().top - parseFloat($('#nav_barfixed').css('marginTop').replace(/auto/, 0));
+    var footTop = $('#footer').offset().top - parseFloat($('#footer').css('marginTop').replace(/auto/, 0));
+
+    var maxY = footTop - $('#nav_barfixed').outerHeight();
+
+    $(window).scroll(function(evt) {
+        var y = $(this).scrollTop();
+        if (y > top) {
+            if (y < maxY) {
+                $('#nav_barfixed').addClass('fixed2').removeAttr('style');
+            } else {
+                $('#nav_barfixed').removeClass('fixed2').css({
+                    //position: 'absolute',
+                    top: (maxY - top) + 'px'
+                });
+            }
+        } else {
+            $('#nav_barfixed').removeClass('fixed2');
+        }
+    });
+});
+  
+</script> 
+<!-- Fixed Bar Script End Here --> 
+<!-- Photo Gallery script start here --> 
+<script>
+function openModal() {
+  document.getElementById('myModalgallery').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModalgallery').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script> 
+<!-- Photo Gallery script end here --> 
+
+<script type="" language="javascript"> 
+$('.moreless-button').click(function() {
+  $('.moretext').slideToggle();
+  if ($('.moreless-button').text() == "+ 2 more") {
+    $(this).text("- Minimise")
+  } else {
+    $(this).text("+ 2 more")
+  }
+});	
+	$('.moreless-button2').click(function() {
+  $('.moretext2').slideToggle();
+  if ($('.moreless-button2').text() == "Learn More") {
+    $(this).text("Minimise")
+  } else {
+    $(this).text("Learn More")
+  }
+});	
+</script>
+</body>
+</html>

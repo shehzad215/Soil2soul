@@ -1,0 +1,965 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Soil2Soul</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="fonts/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="x-icon" href="favicon.ico">		
+
+<!-- Menu css and script start-->
+<script src="menu/jquery-latest.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="menu/navigation.css">
+<link rel="stylesheet" href="menu/navigation.dropdown.css">
+<!-- Menu css and script end-->
+
+<script src="js/bootstrap.min.js"></script>    
+    
+<!-- Tabs slider css start here -->
+<link rel="stylesheet" href="tab/style.css">
+<!-- Tabs slider css end here -->     
+<!-- Tabs CSS & JS Start Here -->
+<link href="tab/tabs.css" rel="stylesheet">
+<script src="tab/tab.js"></script> 
+<script>
+    var Tabs = {
+    init: function () {
+        this.bindUIfunctions();
+        this.pageLoadCorrectTab();
+    },
+    bindUIfunctions: function () {
+        $(document).on('click', '.transformer-tabs a[href^=\'#\']:not(\'.active\')', function (event) {
+            Tabs.changeTab(this.hash);
+            event.preventDefault();
+        }).on('click', '.transformer-tabs a.active', function (event) {
+            Tabs.toggleMobileMenu(event, this);
+            event.preventDefault();
+        });
+    },
+    changeTab: function (hash) {
+        var anchor = $('[href=' + hash + ']');
+        var div = $(hash);
+        anchor.addClass('active').parent().siblings().find('a').removeClass('active');
+        div.addClass('active').siblings().removeClass('active');
+        anchor.closest('ul').removeClass('open');
+    },
+    pageLoadCorrectTab: function () {
+        this.changeTab(document.location.hash);
+    },
+    toggleMobileMenu: function (event, el) {
+        $(el).closest('ul').toggleClass('open');
+    }
+};
+Tabs.init();
+      //@ sourceURL=pen.js
+</script> 
+<!-- Tabs CSS & JS End Here -->     
+    
+
+
+	
+<!-- Bx css and script start-->
+<link rel="stylesheet" href="bxslider/jquery.bxslider.css">
+<script src="bxslider/jquery.bxslider.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.bxslider1').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 40,
+			infiniteLoop: true,
+			slideWidth: 320,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: true,
+			pager:false,
+		});	       
+	});
+	$(document).ready(function(){
+		$('.bxslider2').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 0,
+			infiniteLoop: false,
+			//slideWidth: 262,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: true,
+			pager:false,
+		});	       
+	});
+	$(document).ready(function(){
+		$('.bxslider3').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 20,
+			infiniteLoop: true,
+			slideWidth: 280,
+			minSlides: 1,
+			maxSlides: 20,
+			speed: 800,
+			auto: false,
+			pager:false,
+		});	       
+	});
+</script>
+<!-- Bx slider css and script end-->
+	
+<!-- Animated Css and script start-->
+<link rel="stylesheet" href="animate/animate.css">
+<script src="animate/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+<!-- Animated Css and script end-->	
+
+<!-- Fixed Header script start-->
+<script>
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 50) {
+        $(".topband").addClass("active");
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+        $(".topband").removeClass("active");
+    }
+});
+</script>
+<!-- Fixed Header script end-->	
+
+</head>	
+
+<body>
+	
+<!--Add Your Review Modal start here -->
+<div id="AddReview" class="modal fade" role="dialog">
+<div class="modal-dialog modal-sm"> 
+
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Add Your Review</h4>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Your full name">
+</div>
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Enter your email id">
+</div>
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Mobile / Telephone">
+</div>
+<div class="form-group">
+<select class="form-controlselect">
+<option>Nationality</option>
+<option>India</option>
+</select>
+</div>
+<div class="form-group">
+<textarea class="form-control" placeholder="Your Message or Query"></textarea>
+</div>
+<div class="text-center">
+<button class="submit_btn1 btnmd" type="button">Send</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--Add Your Review Modal end here -->	
+	
+<main class="mainwrapper">
+<!--Topband start here-->
+<header class="topband">
+  <div class="container">
+    <div class="menulogobg">
+      <div class="row nopaddingarea">
+        <div class="col-md-4 col-sm-12 col-xs-12 nopadding">
+          <div class="menu">
+            <nav id="navigation" class="navigation">
+              <div class="nav-header">
+                <div class="nav-toggle"></div>
+              </div>
+              <div class="nav-menus-wrapper">
+                <ul class="nav-menu">
+                  <li><a href="default.html">Home</a></li>
+                  <li><a href="journeys.html">Journeys</a></li>
+                  <li><a href="#">About</a>
+                    <ul class="nav-dropdown">
+<li><a href="about.html">About us</a></li>
+<li><a href="ourteam.html">Our Team</a></li>
+<li><a href="brand.html">Soil 2 Soul Brand</a></li>
+<li><a href="whyspiritual.html">Why Spiritual Tours?</a></li>		
+<li><a href="sanatanadharma.html">Sanatan Dharma</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+                  </li>
+					<li class="hidden-lg hidden-md"><a href="traveltips.html">Travel Tips</a></li>
+                  <li class="hidden-lg hidden-md"><a href="blogs.html">Blogs</a></li>
+				  <li class="hidden-lg hidden-md"><a href="testimonials.html">Testimonials</a></li>
+                  <li class="hidden-lg hidden-md"><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-9 nopadding">
+          <div class="logo"><a href="default.html"><img src="img/logolink.png" class="hidden-sm hidden-xs"><img src="img/logolink_mob.png" class="hidden-lg hidden-md"></a></div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-3 nopadding">
+          <div class="topmenu">
+            <ul>
+			  <li><a href="traveltips.html">Travel Tips</a></li>	
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--Topband end here-->
+<!--Side Button start-->
+<div class="fixedsocialicons">
+<ul>
+<li><a href="tel://+919876543210"><i class="fa fa-phone"></i></a></li>
+<li><a href="https://wa919876543210" target="_blank"><i class="fa fa-whatsapp"></i></a></li>	
+<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+<li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>	
+</ul>
+</div>
+<!--Side Button end-->	
+<div class="maincontarea">	
+<!--Collage start here-->
+<section class="collage">
+<!--Tagline start here-->
+<div class="taglinearea">
+<div class="container">
+<div class="taglinecont">	
+<div class="taglineicon"><img src="img/taglineicon.png"></div>	
+<h1>Transformative journeys<br class="hidden-xs">
+from the Soil 2 Soul of India / Bharat</h1>	
+<h6>“Scholar led unique and life changing experiences focusing on sanatan dharma and its virtues”</h6>
+<div class=""><img src="img/elephant_leftw.png"  alt=""/> &nbsp; <a href="journeys.html"><button type="button" class="explorebtn">Explore</button></a> &nbsp; <img src="img/elephant_rightw.png"  alt=""/></div>	
+</div>	
+</div>	
+</div>
+<!--Tagline end here-->	
+<video width="100%" src="collagevdo.mp4" autoplay loop muted playsinline="true" disablePictureInPicture="true" preload="auto"></video>
+</section>
+<!--Collage end here--> 
+	
+<!--Our Journeys start here-->
+<section class="ourjourneysarea">
+<div class="container">
+<div class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">	
+<div class="ourjourneysbigtext">
+<img src="img/om.png" alt="Om"/><br>
+<br>
+<strong>Soil 2 Soul Expeditions</strong> offers a scholar led transformative journey that encourages self-reflection, mindfulness, and personal growth, fostering a sense of purpose and fulfilment. We are proud to introduce <strong>"Transformative Journeys to Sacred India / Bharat,"</strong> a pioneering initiative aimed at offering seekers an opportunity to explore India's sacred places in a profound and insightful way.</div>
+</div>
+<div class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">	
+<div class="ourjourneyssmalltext topmargin25">Embracing a holistic experience that combines cultural exploration, spiritual understanding, and personal growth. The primary objective of our programs is to provide seekers with an enriching and life-changing experience. Through meticulously designed itineraries, in-depth research, and comprehensive training, we aim to: Immerse seekers in the richness of India's culture, facilitate a deeper understanding of the spiritual practices, philosophies, and beliefs that have shaped India's sacred sites for centuries.</div>	
+</div>
+<div class="wow zoomIn topmargin25" style="visibility: visible; animation-name: zoomIn;">		
+<div class="text-center"><img src="img/elephant_left.png"  alt=""/> &nbsp; <a href="about.html"><button type="button" class="viewallbtn">Learn More</button></a> &nbsp; <img src="img/elephant_right.png" alt=""/></div>
+</div>	
+	
+	
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">	
+<div class="topmargin70"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>	
+<div class="mainheading text-center"><h2>Our Journeys</h2></div>	
+</div>	
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">	
+<div class="topmargin40">
+          <ul class="tabs5">
+            <li rel="tab1a" class="active"> Ramayana</li>
+            <li rel="tab2a"> Mahabharat</li>
+            <li rel="tab3a"> Tour Name 03</li>
+            <li rel="tab4a"> Mahabharat Tour</li>
+            <li rel="tab5a"> Ramayana Tour 01</li>
+            <li rel="tab6a"> Mahabharat</li>
+          </ul>
+          <div class="tab_container5"> 
+            <!-- Ramayana -->
+            <h4 class="d_active5 tab_drawer_heading5" rel="tab1a">Ramayana</h4>
+            <div id="tab1a" class="tab_content5"> 
+              <!--<h3 class="hidden-xs">Asia</h3>-->
+              <div class="journeyslistareahome">
+            <div class="journeyslistbox">
+            <div class="row">
+            <div class="col-md-5">
+            <div class="journeyslistboximgareahome">
+            <div class="trailtag"><span>03</span><br> Trails</div>        
+            <div class="journeyslistboximghome"><img src="img/journey_img01.jpg"></div>		
+            </div>	
+            </div>
+            <div class="col-md-7">
+            <div class="journeyslistboxcontarea">
+            <h3><a href="selected_journeys.html">Discover Your Inner Rama</a></h3>
+            <div class="journeyslistboxdesc">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis and sages throughout centuries and... <a href="#">Read More</a></div>	
+
+            <div class="tails">
+            <ul>
+            <li><span>Trail 01:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 02:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 03:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>    
+            </ul>    
+            </div>  
+   
+
+            </div>	
+            </div>	
+            </div>	
+                </div>	
+                </div>
+            </div>
+            
+            <!--  -->
+            <h4 class="tab_drawer_heading5" rel="tab2a">Mahabharat</h4>
+            <div id="tab2a" class="tab_content5"> 
+              <!--<h3 class="hidden-sm hidden-xs">Europe</h3>-->
+              <div class="journeyslistareahome">
+            <div class="journeyslistbox">
+            <div class="row">
+            <div class="col-md-5">
+            <div class="journeyslistboximgareahome">
+            <div class="trailtag"><span>03</span><br> Trails</div>        
+            <div class="journeyslistboximghome"><img src="img/journey_img02.jpg"></div>		
+            </div>	
+            </div>
+            <div class="col-md-7">
+            <div class="journeyslistboxcontarea">
+            <h3><a href="selected_journeys.html">Discover Your Inner Rama</a></h3>
+            <div class="journeyslistboxdesc">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis and sages throughout centuries and... <a href="#">Read More</a></div>	
+
+            <div class="tails">
+            <ul>
+            <li><span>Trail 01:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 02:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 03:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>    
+            </ul>    
+            </div>  
+   
+
+            </div>	
+            </div>	
+            </div>	
+                </div>	
+                </div>
+            </div>
+            
+            <!--  -->
+            <h4 class="tab_drawer_heading5" rel="tab3a">Tour Name 03</h4>
+            <div id="tab3a" class="tab_content5"> 
+              <!--<h3 class="hidden-sm hidden-xs">North America</h3>-->
+              <div class="journeyslistareahome">
+            <div class="journeyslistbox">
+            <div class="row">
+            <div class="col-md-5">
+            <div class="journeyslistboximgareahome">
+            <div class="trailtag"><span>03</span><br> Trails</div>        
+            <div class="journeyslistboximghome"><img src="img/journey_img03.jpg"></div>		
+            </div>	
+            </div>
+            <div class="col-md-7">
+            <div class="journeyslistboxcontarea">
+            <h3><a href="selected_journeys.html">Discover Your Inner Rama</a></h3>
+            <div class="journeyslistboxdesc">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis and sages throughout centuries and... <a href="#">Read More</a></div>	
+
+            <div class="tails">
+            <ul>
+            <li><span>Trail 01:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 02:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 03:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>    
+            </ul>    
+            </div>  
+   
+
+            </div>	
+            </div>	
+            </div>	
+                </div>	
+                </div>
+            </div>
+            
+            <!--  -->
+            <h4 class="tab_drawer_heading5" rel="tab4a">Mahabharat Tour</h4>
+            <div id="tab4a" class="tab_content5"> 
+              <!--<h3 class="hidden-sm hidden-xs">South America</h3>-->
+              <div class="journeyslistareahome">
+            <div class="journeyslistbox">
+            <div class="row">
+            <div class="col-md-5">
+            <div class="journeyslistboximgareahome">
+            <div class="trailtag"><span>03</span><br> Trails</div>        
+            <div class="journeyslistboximghome"><img src="img/journey_img04.jpg"></div>		
+            </div>	
+            </div>
+            <div class="col-md-7">
+            <div class="journeyslistboxcontarea">
+            <h3><a href="selected_journeys.html">Discover Your Inner Rama</a></h3>
+            <div class="journeyslistboxdesc">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis and sages throughout centuries and... <a href="#">Read More</a></div>	
+
+            <div class="tails">
+            <ul>
+            <li><span>Trail 01:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 02:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 03:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>    
+            </ul>    
+            </div>  
+   
+
+            </div>	
+            </div>	
+            </div>	
+                </div>	
+                </div>
+            </div>
+            
+            <!--  -->
+            <h4 class="tab_drawer_heading5" rel="tab5a">Ramayana Tour 01</h4>
+            <div id="tab5a" class="tab_content5"> 
+              <!--<h3 class="hidden-sm hidden-xs">Africa</h3>-->
+              <div class="journeyslistareahome">
+            <div class="journeyslistbox">
+            <div class="row">
+            <div class="col-md-5">
+            <div class="journeyslistboximgareahome">
+            <div class="trailtag"><span>03</span><br> Trails</div>        
+            <div class="journeyslistboximghome"><img src="img/journey_img05.jpg"></div>		
+            </div>	
+            </div>
+            <div class="col-md-7">
+            <div class="journeyslistboxcontarea">
+            <h3><a href="selected_journeys.html">Discover Your Inner Rama</a></h3>
+            <div class="journeyslistboxdesc">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis and sages throughout centuries and... <a href="#">Read More</a></div>	
+
+            <div class="tails">
+            <ul>
+            <li><span>Trail 01:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 02:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 03:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>    
+            </ul>    
+            </div>  
+   
+
+            </div>	
+            </div>	
+            </div>	
+                </div>	
+                </div>
+            </div>
+            
+            <!--  -->
+            <h4 class="tab_drawer_heading5" rel="tab6a">Mahabharat
+</h4>
+            <div id="tab6a" class="tab_content5"> 
+              <!--<h3 class="hidden-sm hidden-xs">Africa & Newzealand</h3>-->
+              <div class="journeyslistareahome">
+            <div class="journeyslistbox">
+            <div class="row">
+            <div class="col-md-5">
+            <div class="journeyslistboximgareahome">
+            <div class="trailtag"><span>03</span><br> Trails</div>        
+            <div class="journeyslistboximghome"><img src="img/journey_img06.jpg"></div>		
+            </div>	
+            </div>
+            <div class="col-md-7">
+            <div class="journeyslistboxcontarea">
+            <h3><a href="selected_journeys.html">Discover Your Inner Rama</a></h3>
+            <div class="journeyslistboxdesc">This pilgrimage offers spiritual seekers from all paths an opportunity to tread the paths that have been laid down by yogis and sages throughout centuries and... <a href="#">Read More</a></div>	
+
+            <div class="tails">
+            <ul>
+            <li><span>Trail 01:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 02:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>
+            <li><span>Trail 03:</span> Varanasi, Prayagraj, Chitrakoot, Ayodhaya <div class="traillink"><a href="journeysdetails.html"><i class="fa fa-chevron-circle-right"></i></a></div></li>    
+            </ul>    
+            </div>  
+   
+
+            </div>	
+            </div>	
+            </div>	
+                </div>	
+                </div>
+            </div>
+          </div>
+        </div>	
+</div>	
+
+<div class="wow zoomIn topmargin40" style="visibility: visible; animation-name: zoomIn;">		
+<div class="text-center"><img src="img/elephant_left.png"  alt=""/> &nbsp; <a href="journeys.html"><button type="button" class="viewallbtn">View all Journeys</button></a> &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+</div>	
+</div>	
+</section>	
+<!--Our Journeys end here-->
+    
+<!-- post of the week start -->
+<div class="postofweekbg">
+ <div class="container">
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
+<div class=""><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>	
+<div class="mainheading text-center"><h2>Posts of the Week</h2></div>
+</div>	
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
+<div class="row">
+<div class="col-sm-6">
+<div class="postbox">
+<div class="row">
+<div class="col-sm-5">
+<div class="potsboximg"> <a href="#"><img src="img/anupjalota.jpg" alt=""/></a> </div>    
+</div>
+<div class="col-sm-7 content3">Welcoming <strong>Padma Shri. Anup Jalotaji</strong> to grace
+our <em>"Discover Your Inner Rama Trail"</em>.<br><br>
+
+<a href="#" class="link"><i class="fa fa-video-camera"></i> Watch Now</a></div>    
+</div>    
+</div>    
+</div>
+<div class="col-sm-6">
+<div class="postbox">
+<div class="row">
+<div class="col-sm-5">
+<div class="potsboximg"> <a href="#"><img src="img/govinddev.jpg" alt=""/></a> </div>    
+</div>
+<div class="col-sm-7 content3"><strong>Swami Govinddev Giri</strong> offered his blessings and signed our inaugural brochure.<br><br>
+
+<a href="#" class="link"><i class="fa fa-video-camera"></i> Watch Now</a>
+</div>    
+</div>    
+</div>    
+</div>    
+</div>	
+</div>		
+</div>   
+</div>    
+<!-- post of the week end -->
+	
+<!--Meet Our Team start here-->
+<section class="meetyourguidearea">
+<div class="container">
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
+<div class=""><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>	
+<div class="mainheading text-center"><h2>Meet Our Team</h2></div>
+</div>	
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
+<div class="meetyourguidecont">
+
+	
+<div class="bx-wrapper topmargin40">
+<div class="bxslider3">
+<a href="pro_sampadananda.html">
+<div class="meetyourguidebox">
+<div class="guideimgcircle">
+<div class="guideleaf"><img src="img/guideleaf.png"></div>	
+<div class="guideimg"><img src="img/team/Sampadananda_Mishra.jpg"></div>
+<h5>Prof. Sampadanada Mishra</h5>	
+<h6>A Sanskrit Scholar and Awardee by the President of India</h6>    
+</div>		
+</div>	
+</a>	
+
+<a href="dr_sangeeta.html">	
+<div class="meetyourguidebox">
+<div class="guideimgcircle">
+<div class="guideleaf"><img src="img/guideleaf.png"></div>	
+<div class="guideimg"><img src="img/team/Dr_Sangeeta_Sharma.jpg"></div>
+<h6>Dr. Sangeeta Sharma</h6>	
+</div>		
+</div>
+</a>	
+
+<a href="abhishek.html">		
+<div class="meetyourguidebox">
+<div class="guideimgcircle">
+<div class="guideleaf"><img src="img/guideleaf.png"></div>	
+<div class="guideimg"><img src="img/team/Abhisek_Panda.jpg"></div>
+<h6>Mr. Abhishek Panda</h6>	
+</div>		
+</div>
+</a>	
+
+<a href="kalyan_gullap.html">			
+<div class="meetyourguidebox">
+<div class="guideimgcircle">
+<div class="guideleaf"><img src="img/guideleaf.png"></div>	
+<div class="guideimg"><img src="img/team/Kalyanji.jpg"></div>
+<h6>Mr. Kalyan Gullapalli</h6>	
+</div>		
+</div>	
+</a>
+	
+<a href="seema.html">			
+<div class="meetyourguidebox">
+<div class="guideimgcircle">
+<div class="guideleaf"><img src="img/guideleaf.png"></div>	
+<div class="guideimg"><img src="img/team/seema_vedak.jpg"></div>
+<h6>Mrs. Seema Vedaak</h6>	
+</div>		
+</div>	
+</a>	
+
+
+</div>
+</div>	
+	
+</div>	
+</div>	
+<div class="wow zoomIn topmargin30" style="visibility: visible; animation-name: zoomIn;">	
+<div class="text-center"><img src="img/elephant_left.png"  alt=""/> &nbsp; <a href="ourteam.html"><button type="button" class="viewallbtn">Our Team</button></a> &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+</div>	
+</div>	
+</section>	
+<!--Meet Our Team end here-->
+	
+<!--Testimonials section start here-->	
+<section class="testimonialsarea">
+<div class="container">
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">	
+<div class=""><img src="img/testimonials_logoshape.png" class="img-responsive center-block"></div>
+<div class="text-center"><h2>Experience & Sharing</h2></div>	
+<div class="subheadingtextwhite text-center">A glimpse into spiritual experiences</div>	
+</div>	
+<div class="testimonialsboxarea">
+<div class="bx-wrapper1">
+<div class="bxslider1">
+<div class="testimonialsbox">
+<div class="testimonialsimg">
+<div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>	
+<img src="img/testimonials_img01.jpg"></div>	
+<h5>Sandesh</h5>
+<h6>Sandesh</h6>    
+<div class="testimonialstext">Each and every place that we visited has its own reverberations.
+And yes, there were things I witnessed that are still unfathomable to me...</div>	
+</div>
+<div class="testimonialsbox">
+<div class="testimonialsimg">
+<div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>	
+<img src="img/testimonials_img02.jpg"></div>	
+<h5>Swati Bhatt</h5>	
+<div class="testimonialstext">Each and every place that we visited has its own reverberations.
+And yes, there were things I witnessed that are still unfathomable to me...</div>	
+</div>
+<div class="testimonialsbox">
+<div class="testimonialsimg">
+<div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>	
+<img src="img/testimonials_img03.jpg"></div>	
+<h5>Vijay Singh</h5>	
+<div class="testimonialstext">Each and every place that we visited has its own reverberations.
+And yes, there were things I witnessed that are still unfathomable to me...</div>	
+</div>
+<div class="testimonialsbox">
+<div class="testimonialsimg">
+<div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>	
+<img src="img/testimonials_img01.jpg"></div>	
+<h5>Sandesh</h5>	
+<div class="testimonialstext">Each and every place that we visited has its own reverberations.
+And yes, there were things I witnessed that are still unfathomable to me...</div>	
+</div>
+<div class="testimonialsbox">
+<div class="testimonialsimg">
+<div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>	
+<img src="img/testimonials_img02.jpg"></div>	
+<h5>Swati Bhatt</h5>	
+<div class="testimonialstext">Each and every place that we visited has its own reverberations.
+And yes, there were things I witnessed that are still unfathomable to me...</div>	
+</div>
+<div class="testimonialsbox">
+<div class="testimonialsimg">
+<div class="testimonialsqoute"><img src="img/testimonials_qoute.png"></div>	
+<img src="img/testimonials_img03.jpg"></div>	
+<h5>Vijay Singh</h5>	
+<div class="testimonialstext">Each and every place that we visited has its own reverberations.
+And yes, there were things I witnessed that are still unfathomable to me...</div>	
+</div>	
+</div>
+</div>
+<div class="wow zoomIn" style="visibility: visible; animation-name: zoomIn;">	
+<div class="topmargin30 text-center"><img src="img/elephant_left.png"  alt=""/>  &nbsp; <a href="testimonials.html"><button type="button" class="viewallbtn">View all Experiences</button></a> <button type="button" class="addreviewbtn rowmargin5" data-toggle="modal" data-target="#AddReview">Add Your Experiences</button> &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+</div>	
+</div>	
+<!--Testimonials Why Choose section end here-->
+</div>	
+</section>	
+<!--Testimonials end here-->	
+	
+<!--Middle section start here-->
+<section class="whitecontareahome">
+<div class="container">
+<!--Why Choose Us section start here-->	
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">	
+<div class=""><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>	
+<div class="mainheading text-center"><h2>Why Choose Us?</h2></div>
+<div class="subheadingtext text-center">Bring spirituality to your life</div>
+</div>
+<div class="wow bounce" style="visibility: visible; animation-name: bounce;">	
+<div class="row padding5pxarea topmargin30">
+<div class="col-md-2 col-sm-4 col-xs-6 padding5px">
+<div class="whychooseboxarea">
+<div class="whychoosebox affordablejourneysbox">
+<div class="whychooseboxcont">
+<div class="whychooseicon"><img src="img/scholar_led.png"></div>
+<h6>Scholar Led</h6>
+<img src="img/swastika.png" alt=""/> </div>	
+</div>
+</div>		
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 padding5px">
+<div class="whychooseboxarea">
+<div class="whychoosebox guidedexperiencesbox">
+<div class="whychooseboxcont">
+<div class="whychooseicon"><img src="img/daily_programs.png"></div>
+<h6>Immersive Daily Programs</h6>	
+<img src="img/swastika.png" alt=""/>	
+</div>	
+</div>
+</div>		
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 padding5px">
+<div class="whychooseboxarea">
+<div class="whychoosebox accomodationbox">
+<div class="whychooseboxcont">
+<div class="whychooseicon"><img src="img/inner_transformation.png"></div>
+<h6>Inner Transformation</h6>	
+<img src="img/swastika.png" alt=""/>	
+</div>	
+</div>
+</div>		
+</div>	
+<div class="col-md-2 col-sm-4 col-xs-6 padding5px">
+<div class="whychooseboxarea">
+<div class="whychoosebox bestvalueitinerarybox">
+<div class="whychooseboxcont">
+<div class="whychooseicon"><img src="img/daily_yoga.png"></div>
+<h6>Daily Yoga and Meditation Practises</h6>	
+<img src="img/swastika.png" alt=""/>	
+</div>	
+</div>
+</div>		
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 padding5px">
+<div class="whychooseboxarea">
+<div class="whychoosebox responsibletourismbox">
+<div class="whychooseboxcont">
+<div class="whychooseicon"><img src="img/luxurious_touring.png"></div>
+<h6>Luxurious Touring Facility</h6>	
+<img src="img/swastika.png" alt=""/>	
+</div>	
+</div>
+</div>		
+</div>
+<div class="col-md-2 col-sm-4 col-xs-6 padding5px">
+<div class="whychooseboxarea">
+<div class="whychoosebox guestsupportbox">
+<div class="whychooseboxcont">
+<div class="whychooseicon"><img src="img/culture_india.png"></div>
+<h6>Culture of India</h6>
+<img src="img/swastika.png" alt=""/>	
+</div>	
+</div>
+</div>		
+</div>	
+</div>	
+</div>	
+<!--Why Choose Us section end here-->			
+	
+<!--Blogs section start here-->
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">	
+<div class="topmargin60"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>	
+<div class="mainheading text-center"><h2>Blogs to Inspire Your Inner Journey</h2></div>
+</div>	
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">	
+<div class="row topmargin30">
+<div class="col-md-5 col-sm-4">
+<div class="blogbox">	
+<a href="guptgodavari.html">
+<div class="blogboxbigimg">
+<div class="blogboxbigshade">
+<h5>Unveiling the Spiritual Tapestry: The Significance of Gupt Godavari Caves</h5>	
+<div class="blogadmindetails">
+<div class="blogadmindetailscont">
+<div class="blogadminiconcircle"><img src="img/usericon.png"></div>	
+</div>
+<div class="blogadmindetailscont">
+<div class="blognamedatetext">Vishal Shah<br>
+<span>08 Feb 2024</span></div>	
+</div>
+</div>	
+</div>	
+<img src="img/blog_img01.jpg" alt="">
+</div>
+</a>	
+</div>	
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="blogbox">	
+<a href="varanasiconfluence.html">
+<div class="blogboxsmallimg">
+<div class="blogboxbigshade">
+<h5>Unraveling the Spiritual Harmony: Varanasi's Confluence of the Divine</h5>	
+<div class="blogadmindetails">
+<div class="blogadmindetailscont">
+<div class="blogadminiconcircle"><img src="img/usericon.png"></div>	
+</div>
+<div class="blogadmindetailscont">
+<div class="blognamedatetext">Vishal Shah<br>
+<span>09 Feb 2024</span></div>	
+</div>
+</div>	
+</div>	
+<img src="img/blog_img05.jpg" alt="">
+</div>
+</a>	
+</div>	
+<div class="blogbox">	
+<a href="blogdetails.html">
+<div class="blogboxsmallimg">
+<div class="blogboxbigshade">
+<h5>The Wonder Of Biraja Devi Temple In Jajpur</h5>	
+<div class="blogadmindetails">
+<div class="blogadmindetailscont">
+<div class="blogadminiconcircle"><img src="img/usericon.png"></div>	
+</div>
+<div class="blogadmindetailscont">
+<div class="blognamedatetext">Admin<br>
+<span>03 Jan 2024</span></div>	
+</div>
+</div>	
+</div>	
+<img src="img/blog_img03.jpg" alt="">
+</div>
+</a>	
+</div>	
+</div>
+<div class="col-md-3 col-sm-4">
+<div class="blogbox">	
+<a href="blogdetails.html">
+<div class="blogboxbigimg">
+<div class="blogboxbigshade">
+<h5>Travel Tips for to Visit Kamakhya Temple</h5>	
+<div class="blogadmindetails">
+<div class="blogadmindetailscont">
+<div class="blogadminiconcircle"><img src="img/usericon.png"></div>	
+</div>
+<div class="blogadmindetailscont">
+<div class="blognamedatetext">Admin<br>
+<span>03 Jan 2024</span></div>	
+</div>
+</div>	
+</div>	
+<img src="img/blog_img04.jpg" alt="">
+</div>
+</a>	
+</div>	
+</div>	
+</div>	
+</div>
+<div class="wow zoomIn" style="visibility: visible; animation-name: zoomIn;">	
+<div class="text-center"><img src="img/elephant_left.png"  alt=""/>  &nbsp; <a href="blogs.html"><button type="button" class="viewallbtn">View all Blogs</button></a> &nbsp; <img src="img/elephant_right.png"  alt=""/> </div>
+</div>	
+<!--Blogs section end here-->
+	
+<!--Our Co-Brands section start here-->	
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">	
+<div class="topmargin60"><img src="img/logoshape_heading.png" class="img-responsive center-block"></div>	
+<div class="mainheading text-center"><h2>Our Co-Brands</h2></div>
+</div>	
+<div class="wow slideInUp" style="visibility: visible; animation-name: slideInUp;">	
+<div class="row topmargin30">
+<div class="col-sm-6">
+<div class="antaryatrabanner"><img src="img/antaryatra_img01.jpg"></div>	
+</div>
+<div class="col-sm-6 rowmargin30">
+<div class="bx-wrapper2">
+<div class="bxslider2">
+<div class="tatvayogbanner"><a href="https://www.tatvayog.com/" target="_blank"><img src="img/tatvayogbanner_img01.jpg"></a></div>
+<div class="tatvayogbanner"><a href="https://www.tatvayog.com/" target="_blank"><img src="img/tatvayogbanner_img01.jpg"></a></div>	
+</div>
+</div>	
+</div>	
+</div>
+</div>	
+<!--Our Co-Brands section end here-->	
+
+</div>	
+</section>	
+<!--Middle section end here-->
+	
+</div>	
+	
+<!--Footer start here-->
+<footer class="footer">
+<div class="container">
+<div class="text-center"><img src="img/footer_art.png" alt=""/></div>	
+<div class="topmargin20"><img src="img/footer_logoshape.png" class="img-responsive center-block"></div>	
+<div class="text-center topmargin15"><h6>Our Journeys</h6></div>	
+<div class="footerlinks"><a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a> | <a href="#">Journey name here 02</a> | <a href="#">Journey name here 03</a> | <a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a> | <a href="#">Journey name here 02</a> | <a href="#">Journey name here 03</a> | <a href="#">Mystical Varanasi Pilgrimage</a> | <a href="#">Buddhist Tour from Varanasi to Gorakhpur</a></div>	
+	
+<div class="footercontactarea">
+<div class="row">
+<div class="col-sm-8">
+<h6>Contact Info</h6>
+<div class="footertext">
+<ul>
+<li><span>Phone:</span> <a href="tel://+911123456789">+91 11 23456789</a></li>
+<li><span>Mobile:</span> <a href="tel://+919876543210">+91 9876543210</a></li>
+<li><span>WhatsApp:</span> <a href="#">+91 9876543210</a></li>
+<li><span>Email:</span> <a href="mailto:info@soil2soul.com">info@soil2soul.com</a></li>	
+</ul>	
+</div>	
+</div>
+<div class="col-sm-4 rowmargin20">
+<h6>Subscribe to our newsletter</h6>
+<div class="input-group">
+<input type="text" class="newslettertextfield" placeholder="Enter Email*">
+<span class="input-group-btn">
+<button class="newsletterbtn" type="button"><i class="fa fa-send"></i></button>
+</span> </div>	
+</div>	
+</div>	
+</div>	
+	
+<div class="footermenu"> <a href="default.html">Home</a> <a href="journeys.html">Journeys</a> <a href="about.html">About us</a> <a href="ourteam.html">Our Team</a> <a href="brand.html">Soil 2 Soul Brand</a> <a href="whyspiritual.html">Why Spiritual Tours?</a> <a href="sanatanadharma.html">Sanatana Dharma</a> <a href="gallery.html">Gallery</a> <a href="traveltips.html">Travel Tips</a> <a href="blogs.html">Blogs</a> <a href="testimonials.html">Testimonials</a> <a href="contact.html">Contact</a> </div>	<div class="row topmargin30">
+<div class="col-sm-4 col-xs-4">
+<div class="footertext">Powered by:</div>	
+<div class="topmargin10"><img src="img/tatva_logo.png"></div>	
+</div>
+<div class="col-sm-4 col-xs-8 center-mob-right">
+
+</div>
+<div class="col-sm-4 col-xs-12 right-mob-center">
+<div class="footertext topmargin20">
+Copyright <script>document.write(new Date().getFullYear())</script>. All Right Reserved.	
+</div>
+</div>	
+</div>
+	
+</div>		
+</footer>
+<!--Footer end here-->
+	
+</main>
+
+<!-- Menu css and script start-->
+<script type="text/javascript" src="menu/navigation.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(){				
+		$("#navigation").navigation();	
+	});
+</script>
+<!-- Menu css and script end-->	
+<!-- Tabs slider script start here --> 
+<script  src="tab/script.js"></script> 
+<!-- Tabs slider script end here --> 
+</body>
+</html>
