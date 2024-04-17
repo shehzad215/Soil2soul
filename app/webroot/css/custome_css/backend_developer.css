@@ -1,0 +1,343 @@
+/*Admin Page Heder*/
+.actions > .btn-group-sm > .dropdown-toggle{height: 29px !important;}
+/* input{text-transform: capitalize;}*/
+input[type='email']{text-transform:none !important;}
+input[type='password']{text-transform:none !important;}
+#UserUsername{text-transform:none !important;}
+#UserPassword{text-transform:none !important;}
+#UserActivationPassword{text-transform:none !important;}
+.page-header-fixed .page-container {margin-top: 46px !important;}
+.notification{position: absolute;top: 32px;right: 0;z-index: 9999;}
+
+.page-header.navbar .page-logo {
+    float: left;
+    display: block;
+    width: 120px;
+    height: 75px;
+   padding: 7px 15px;
+}
+.page-header.navbar {
+    background: #000;
+}
+
+.page-footer {
+    background: #000;
+}
+
+/*admin company Logo*/
+.logoClass{ 
+    margin: 10px 0px;  
+    width: 90px;
+    object-fit: cover;
+    object-position: 50% 50%; 
+}
+
+/*login User logo*/
+.profile-img1{
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 41px;
+    margin-top: 15px;
+    height: 41px;
+    border-radius: 8px;
+}
+
+.pfdetails{ 
+    text-align: center;
+    padding: 5px;
+    color: #000;
+    font-size: 14px;
+    border:1px solid #555;
+    background: #fff;
+ }
+
+.pfdetails > li {
+    border-bottom: 1px solid #555;
+    text-decoration: none !important;
+    padding: 6px 0px;
+    color: #000;
+}
+
+.pfdetails > li > a  {
+      color: #000 !important;
+      text-decoration: none !important;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle:hover {
+    background-color: #000;
+}
+
+.pfdetails > li > a > span {
+    color: #555 !important;
+    text-decoration: none;
+}
+
+/*Side Bar Closed CSS*/
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .sidebar-toggler, .page-sidebar .sidebar-toggler {
+    background: none !important;
+    font-size: 24px !important;
+    color: #fff !important;
+}
+
+/*Side Bar Css*/
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li > a > i, .page-sidebar .page-sidebar-menu .sub-menu > li > a > i {
+     color: #fff !important;
+}
+
+.page-sidebar-menu{
+    margin-top: 30px !important;
+}
+
+.page-sidebar-closed.page-sidebar-fixed , .page-sidebar {
+    background-color: #000;
+}
+
+.page-sidebar-closed .page-sidebar .page-sidebar-menu.page-sidebar-menu-closed {
+    width: 45px !important;
+    margin-top: 30px !important;
+    background: #000;
+}
+
+.page-sidebar li:hover{
+    background: #000 !important;
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li > a, .page-sidebar .page-sidebar-menu > li > a {
+    border-top: 1px solid #fff;
+    color: #fff;
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li > a > i, .page-sidebar .page-sidebar-menu > li > a > i {
+    color: #fff;
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a:hover, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a:hover, .page-sidebar .page-sidebar-menu > li.active > a:hover, .page-sidebar .page-sidebar-menu > li.active.open > a:hover {
+    background: #673400;
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a, .page-sidebar .page-sidebar-menu > li.active > a, .page-sidebar .page-sidebar-menu > li.active.open > a {
+    background: #673400;
+    border-top-color: transparent;
+    color: #ffffff;
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li > a, .page-sidebar .page-sidebar-menu .sub-menu > li > a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    background: #000;
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li:hover > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.open > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.active > a, .page-sidebar .page-sidebar-menu .sub-menu > li:hover > a, .page-sidebar .page-sidebar-menu .sub-menu > li.open > a, .page-sidebar .page-sidebar-menu .sub-menu > li.active > a {
+    background: #673400 !important;
+}
+
+.page-sidebar-menu li a:hover, .page-sidebar-menu-closed li a:hover{
+    background: #673400 !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+.page-sidebar-menu li a:hover > i{
+    color: #fff !important;
+}
+
+/*Search Button*/
+.input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    width: 25% !important;
+}
+
+.list-search-submit{
+      height: 34px !important; 
+}
+
+.tab-box {
+    background: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 0.25rem;
+    box-shadow: 5px 5px 5px 0px rgb(2 2 2 / 10%);
+}
+
+.logoClients {
+    width: 100px !important;
+    object-position: 50% 0%;
+}
+
+.imageFile{
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.imageTestimonail {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50% ;
+}
+
+.imageAmenities{                
+    width: 100px;
+    height: 70px;
+    object-position: 50% 0%;
+}
+
+.imageBanner{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: 50% 00%;
+     margin-bottom: 10px;
+}
+
+
+.iconAmenities{
+    height: 45px;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+
+.imageicon{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: 50% 0%;
+    border-radius: 50%;
+    background: #fff;
+    border:1px solid #000;
+    padding: 3px;
+}
+
+.uplodedimageFile{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 50% 0%;
+    margin-bottom: 10px;
+}
+
+
+.uplodedIconFile{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #fff;
+     object-fit: cover;
+    object-position: 0% 50%;
+}
+
+.uploadImageBtn{
+    margin-top: 10px;
+}
+
+
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #ddd !important;
+}
+
+.table-bordered tbody th{
+    background: #673400 !important;
+    color: #fff !important;
+}   
+
+.table-bordered thead th{
+  background: #000 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  color: #fff !important;
+}
+
+.table-bordered thead th a{
+  color: #fff !important;
+ }
+
+ .checkbox-list>label.checkbox-inline:first-child, .checkbox>label, .form-horizontal .checkbox>label, .portlet.light .form .form-actions.left, .portlet.light .portlet-form .form-actions.left, .radio-list>label.radio-inline:first-child {
+    padding-left: 20px !important;
+}
+
+.productLogo{
+    width: 20px;
+    height: 20px;
+}
+
+.faqcategorybox svg {
+  fill: #8e999d !important;
+  transition: all 0.5s;
+  height: 35px;
+}
+
+.whypointiconcircle {
+  background: #d52055;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: table;
+  text-align: center;
+}
+
+.whypointicon {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.whypointicon img {
+  height: 30px;
+}
+
+.ulrKeywod{
+    background: #ccc;
+    padding: 3px 5px;
+    font-weight: 600; 
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.iconZise{
+    width: 32px;
+    height: 22;
+}
+
+.col-md-5th-1{
+    width: 20%;
+}
+
+
+.portlet.box.yellow {
+    border: 1px solid #673400 !important;
+    border-top: 0;
+}
+
+.portlet.box.yellow>.portlet-title, .portlet.yellow, .portlet>.portlet-body.yellow {
+    background-color: #673400 !important;
+}
+
+
+.listingBar{
+    margin-bottom: 0px !important;
+    min-height: 30px !important;
+}
+
+.listingBar li{
+    border-left: 1px solid #ccc;
+}
+
+.listingBar li>a{
+    padding: 10px !important;
+}
+
+/*.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px !important;
+    border: 1px solid transparent;
+}*/
+

@@ -1,0 +1,2399 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'ubunturegular';
+    font-size: 13px;
+}
+
+a:hover, a:active, a:visited {
+    text-decoration: none;
+}
+
+/* Tooltip container */
+.customtooltip {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.customtooltip .cutomtooltiptext {
+    font-size: 12px;
+    visibility: hidden;
+    width: 88px;
+    background-color: #EC682A;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+.customtooltip .cutomtooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #EC682A transparent transparent;
+}
+/* Show the customtooltip text when you mouse over the customtooltip container */
+.customtooltip:hover .cutomtooltiptext {
+    visibility: visible;
+    z-index: 1000;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+div.shadow:hover {
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+}
+.maiwrapper {
+   /* margin: 0px auto;
+   margin-bottom: 10px;*/
+   padding: 0px;
+}
+
+.lookingforcontain{
+    background: rgba(242,243,245,1);
+background: -moz-linear-gradient(left, rgba(242,243,245,1) 0%, rgba(228,230,233,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,243,245,1)), color-stop(100%, rgba(228,230,233,1)));
+background: -webkit-linear-gradient(left, rgba(242,243,245,1) 0%, rgba(228,230,233,1) 100%);
+background: -o-linear-gradient(left, rgba(242,243,245,1) 0%, rgba(228,230,233,1) 100%);
+background: -ms-linear-gradient(left, rgba(242,243,245,1) 0%, rgba(228,230,233,1) 100%);
+background: linear-gradient(to right, rgba(242,243,245,1) 0%, rgba(228,230,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f5', endColorstr='#e4e6e9', GradientType=1 );
+border-radius: 6px 0px 0px 6px;
+-moz-border-radius: 6px 0px 0px 6px;
+-webkit-border-radius: 6px 0px 0px 6px;
+border: 0px solid #000000;
+border:2px solid #d9dadd;
+color:#e86527;
+font-size:13px;
+line-height:14px;
+font-family: 'ubuntumedium';
+position:fixed;
+right:0;
+top:36%;
+padding:8px;    
+}
+
+.innerPageSeachbox{
+    width:62% !important;
+    height:38px !important;
+    font-size: 13px !important;
+}
+.attraction-title {
+    color: #006acc;
+    margin: 0px 0 0;
+    font-size: 16px;
+}
+
+.attraction-product-title{
+    color: #ed8323;
+    font-size: 14px;
+}
+
+.topbandcollg {
+    position: absolute;
+    z-index: 99;
+/*    transform:translateX(-50%);
+left: 50%;*/
+margin:0px auto;
+width:100%;
+}
+
+
+.addtolistbtnhomepage{
+    padding: 0 0 15px 33px !important;
+}
+
+/*boostrap typehead auto search js file boostrap-tyoehead.js*/
+.dropdownlimit{
+  max-height: 400px !important;
+  overflow-y: auto !important;
+}
+
+/*Attraction View page slider video*/
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img{
+  display: unset;
+}
+
+/*homepage banner link*/
+a.colimgtagline:hover {
+    color: #FFFFFF;
+}
+
+.navbar-fixed-top + .content-container {
+    margin-top: 70px;
+  }
+  .content-container {
+    margin: 0 130px;
+  }
+  #top-link-block.affix-top {
+    position: absolute; /* allows it to "slide" up into view */
+    bottom: -82px; /* negative of the offset - height of link element */
+    right: 10px; /* padding from the left side of the window */
+  }
+  #top-link-block.affix {
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 36px; /* height of link element */
+    right: 10px; /* padding from the left side of the window */
+  }
+  .help-inline{
+    color: #CD5644;
+  }
+  .list-inline > li{
+    padding-left:0px;
+  }
+
+/*Image over effect on Attrction View Page start here*/
+
+.hovereffect {
+    width:100%;
+    height:100%;
+    float:left;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    cursor:default;
+}
+
+.hovereffect .overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow:hidden;
+    top:0;
+    left:0;
+    opacity:0;
+    background-color:rgba(0,0,0,0.5);
+    -webkit-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out
+}
+.innercolgheadcont3 {
+    margin-bottom:120px;
+}
+.hovereffect img {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+.hovereffect a.info {
+    text-decoration:none;
+    display:inline-block;
+    text-transform:uppercase;
+    color:#fff;
+    border:1px solid #fff;
+    background-color:transparent;
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    margin:0px;
+    padding: 110px;
+}
+
+.hovereffect a.info:hover {
+    box-shadow:0 0 5px #fff;
+}
+.pagination > li > a, .pagination > li > span{
+    
+    border-radius: 20px;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span{
+    border-radius: 20px;
+}
+
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover{
+    background-color: #e76325;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span{
+    border-radius: 20px;
+}
+.pagination > li > a, .pagination > li > span{
+    margin: 3px;
+}
+.hovereffect:hover img {
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+/*start rating color change start here*/
+.fa-star:before, .fa-star:hover ~ .fa-star:before{
+color:#F7A430;
+content: "";
+}
+.modal-open .modal{
+    z-index: 10000;
+}
+/*start rating color change end here*/
+/*.imagehovereffect {
+    width:100%;
+    height:100%;
+    float:left;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    cursor: hand;
+}
+.imagehovereffect img {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+.imagehovereffect:hover img {
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}*/
+.hovereffect:hover h2,.hovereffect:hover a.info {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -ms-transform:translatey(0);
+    -webkit-transform:translatey(0);
+    transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+    -webkit-transition-delay:.2s;
+    transition-delay:.2s;
+}
+/*Image over effect on Attrction View Page start here*/
+.attractionImgeGallery{
+    width: 187px !important;
+    height: 129px !important;
+}
+
+.betaWord{
+    color: white;
+    top: -52px;
+    right: -176px;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+
+}
+.logo {
+    margin: 5px 0px;
+    padding: 0px;
+}
+
+.toplinks {
+    padding: 0px;
+    float: right;
+}
+
+.toplinks ul {
+    margin: 0;
+    padding: 0;
+}
+.datepicker-inline {
+    width: 100%;
+}
+
+.datepicker .prev, .datepicker .next, .datepicker-switch {
+    font-size: 20px;
+}
+
+.dow {
+    background: #EC682A;
+    font-size: 13px;
+    color: #fff;
+    line-height: 6px;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+}
+
+.datepicker table tr td.new, .datepicker table tr td.old {
+    background: #EEEEF0 !important;
+    color: #bcbbc0;
+}
+
+.day {
+    background: #d4d3d8;
+    color: #545460;
+}
+
+.datepicker .range-start {
+    background: linear-gradient(135deg, #cad580 50%, #acb573 50%);
+}
+.colimgtagline{
+    position:absolute;
+    z-index:999999999;
+    right:1.5%;
+    top:90%;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    line-height:14px;
+    font-weight: normal;
+    color:#fff;
+    background:rgba(0,0,0,0.7);
+    border-radius:4px;
+    text-shadow: 0 1px 1px #000;    
+}
+
+.datepicker .range-end {
+    background: linear-gradient(135deg, #acb573 50%, #cad580 50%);
+}
+
+.datepicker .range {
+    background: #acb573 !important;
+}
+
+.datepicker table tr td, .datepicker table tr th {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: 2px solid !important;
+    border-color: white !important;
+}
+
+.datepicker table tr th {
+    height: 32px !important;
+}
+.datepicker table tr td.active:active, 
+.datepicker table tr td.active.highlighted:active, 
+.datepicker table tr td.active.active, 
+.datepicker table tr td.active.highlighted.active {
+  background-color: #EC682A;
+}
+.datepicker td.disabled.day:before {
+    content: "X";
+    position: absolute;
+    font-size: 25px;
+    color: #CCC;
+    margin-top: -8px;
+}
+.toplinks > ul > li {
+    background: rgba(255, 255, 255, 0.2);
+    list-style-type: none;
+    display: inline-block;
+    margin: 2px 2px 0px 0px;
+    padding: 10px 10px;
+    font-family: 'ubuntumedium';
+    color: #fff;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.toplinks > ul > li > a > img {
+    margin-right: 2px;
+}
+
+.toplinks a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.toplinks a:hover {
+    color: #ec682a;
+    text-decoration: none;
+}
+
+.rightdropdown {
+    float: left;
+    background: rgba(255, 255, 255, 0.2);
+    margin-top: 0px;
+    padding: 10px 10px 10px 10px;
+    margin-right: -1px;
+    clear: both;
+    margin-top: 2px;
+}
+
+.rightdropdown ul {
+    margin: 0px;
+    padding: 0px;
+}
+#home-slides .bx-wrapper .bx-pager, #home-slides .bx-wrapper .bx-controls-auto{
+    bottom: 40px;
+}
+.rightdropdown ul li {
+    display: block;
+    margin: 0px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #484848;
+}
+
+.dropdownbtn {
+    background: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'ubuntumedium';
+    color: #fff;
+    font-size: 12px;
+    border: none;
+}
+
+.toplinkmob {
+    padding: 0px;
+}
+
+.menu {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.searchband {
+    margin-top: 250px;
+    padding: 0px 0px;
+    position:absolute;
+    width:98%;
+}
+.searchbandwidth{
+    width:98% !important;  
+}
+
+.tagline {
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 6px;
+    font-family: 'ubuntumedium';
+    color:#102c54;
+   /*  font-size:40px;  */
+    font-size:35px;
+}
+
+.smallTaglineHome{
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 10px;
+    font-family: 'ubuntumedium';
+    color: #102c54;
+    font-size: 16px;
+}
+
+.tagline img {
+    width: 658px;
+}
+
+.searchbg {
+    background: rgba(255,255,255,0.6);
+    padding: 5px;
+    border-radius: 5px;
+    max-width:100% !important;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);   
+}
+
+.textfieldsearch {
+    background: #fff;
+    border: solid 1px #c7c8bb;
+    padding: 10px 10px;
+    font-size: 15px;
+    color: #959595;
+    border-radius: 5px;
+    width: 100%;
+    height: 44px;
+}
+
+.searchbtn {
+    border-radius: 5px;
+    background: url(../img/searchicon.png) no-repeat center center #e76325;
+    width: 50px;
+    border: none;
+    padding: 21px 0px 22px 0px;
+}
+
+.contentarea {
+    margin: 14px 0px;
+}
+
+.textblack30head {
+    font-family: 'questrialregular';
+    color: #111111;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.textblack35head {
+    font-family: 'questrialregular';
+    color: #111111;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.textblack20head {
+    font-family: 'questrialregular';
+    color: #111111;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.products .prodImg {
+    position: relative;
+    overflow: hidden;
+}
+
+.products .prodImg .details {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    height: 100%;
+    padding: 0px 10px;
+    position: absolute;
+    transition: all 0.5s ease-out 0s;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.products .prodImg:hover {
+    cursor: pointer;
+}
+
+.products .prodImg:hover .details {
+    height: 100%;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.deals .dealsImg {
+    position: relative;
+    overflow: hidden;
+}
+
+.deals .dealsImg .details2 {
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    height: 50px;
+    padding: 2px 10px;
+    position: absolute;
+    transition: all 0.5s ease-out 0s;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.deals .dealsImg:hover {
+    cursor: pointer;
+}
+
+.deals .dealsImg:hover .details2 {
+    height: 50px;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.dealsoffertext {
+    font-family: 'ubuntumedium';
+    font-size: 22px;
+    color: #f97322;
+    line-height: 18px;
+}
+
+.dealsoffertextsmall {
+    font-family: 'ubuntulight';
+    font-size: 13px;
+    color: #f97322;
+}
+
+.dealspricetext {
+    font-family: 'ubuntumedium';
+    font-size: 16px;
+    color: #fff;
+    line-height: 16px;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.dealspricetextsmall {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.dealscont {
+    font-size: 15px;
+    color: #484848;
+    line-height: 18px;
+    margin: 10px 0px;
+    height: 30px;
+}
+
+.dealslocation {
+    font-size: 13px;
+    color: #ec682a;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #e76325;
+    border-color: #e76325;
+}
+
+.offerscont {
+ border-top: 1px solid rgba(255,255,255,0.6);
+ border-bottom: 1px solid rgba(255,255,255,0.6);
+ padding: 10px 0px;
+ text-align: center;
+ font-size: 22px;
+ text-transform: uppercase;
+ color: #fff;   
+ position: relative;
+    /*transform:translateY(-50%);
+    top: 50%;*/
+    margin-top:35%;
+    line-height: 22px;
+}
+
+.destinationcont {
+    position: relative;
+    /*transform:translateY(-50%);
+    top: 50%;*/
+    margin-top:30%;
+}
+
+.destinationtitle {
+    font-family: 'ubuntulight';
+    padding: 0px 0px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.destinationdesc {
+    border-top: solid 1px rgba(255, 255, 255, 0.6);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+    padding: 10px 0px;
+    text-align: center;
+    font-family: 'ubuntulight';
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.rowmargin {
+    margin-top: 0px;
+}
+
+.line-title {
+    border-bottom: 1px solid #767676;
+    margin: 16px 0px 16px 0px;
+    height: 11px;
+    text-align: center;
+}
+
+.line-title span {
+    background: #FFF;
+    padding: 8px 10px 7px 10px;
+    border: solid 1px #ec682a;
+    color: #ec682a;
+    font-size: 15px;
+}
+
+.line-title a {
+    color: #ec682a;
+    text-decoration: none;
+}
+
+.line-title a:hover {
+    color: #111111;
+    text-decoration: none;
+}
+
+.topattractionband {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.attraction .attractionImg {
+    position: relative;
+    overflow: hidden
+}
+
+.attraction .attractionImg .details1 {
+    background: rgba(236, 104, 42, 0.9);
+    bottom: 0;
+    height: 0px;
+    padding: 10px 10px;
+    position: absolute;
+    transition: all 0.5s ease-out 0s;
+    width: 100%;
+    margin-bottom: -20px;
+}
+
+.attraction .attractionImg:hover {
+    cursor: pointer;
+}
+
+.attraction .attractionImg:hover .details1 {
+    height: 113px;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.attractionhead {
+    font-family: 'questrialregular';
+    font-size: 16px;
+    color: #fff;
+    line-height: 14px;
+}
+
+.attractionsubhead {
+    font-family: 'questrialregular';
+    font-size: 15px;
+    color: #fff;
+}
+
+.top-deals-attraction-title {
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top-deals-attraction-location {
+    font-size: 12px;
+    display: block;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.topattrcprice {
+    font-family: 'ubuntulight';
+    font-size: 13px;
+    color: #fff;
+    margin-top: 5px;
+    line-height: 16px;
+}
+
+.topattrcpricetext {
+    font-family: 'ubuntumedium';
+    font-size: 16px;
+    color: #fff;
+}
+
+.heartbtn {
+    border: solid 1px #fff;
+}
+
+.viewtbtn {
+    border: solid 1px #fff;
+    border-right: none;
+    height: 32px;
+}
+
+.viewtbtn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.viewtbtn a:hover {
+    color: #111111;
+    text-decoration: none;
+}
+
+.mosaicflow__column {
+    float: left;
+}
+
+.mosaicflow__item {
+    position: relative;
+    padding: 0px 0px;
+    margin-bottom: 0px;
+}
+
+.mosaicflow__item img {
+    /*display:block;
+    height:auto;*/
+}
+
+.servicesband {
+    background: url(../img/servicesbg.png) no-repeat center top #dde2ea;
+    margin-bottom: 1px;
+    padding: 30px 0px;
+}
+
+.servicesicon {
+    text-align: center;
+}
+
+.servicesheading {
+    font-family: 'ubuntumedium';
+    font-size: 18px;
+    color: #0b1110;
+    line-height: 18px;
+    text-align: center;
+    margin: 7px 0px 15px 0px;
+}
+
+.servicescont {
+    font-size: 13px;
+    color: #484848;
+    line-height: 18px;
+    text-align: center;
+}
+
+.footerband {
+    margin-top: 20px;
+    padding: 30px 0px;
+    border-top: solid 1px #ced3da;
+    font-size: 13px;
+    color: #747983;
+    line-height: 18px;
+}
+
+.logofooter {
+    margin-bottom: 10px;
+}
+
+.footermenu {
+    border-left: solid 1px #adb3bc;
+    border-right: solid 1px #adb3bc;
+    padding: 0px 30px;
+}
+
+.footermenu a {
+    color: #747983;
+    text-decoration: none;
+}
+
+.footermenu a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.footermenu ul {
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+.footermenu ul li {
+    list-style-type: none;
+    padding: 2px 0px;
+    margin: 0px 0px;
+}
+
+.textfieldsearchfooter {
+    background: #dbdbdb;
+    border: none;
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #747983;
+    width: 100%;
+}
+
+.searchbtnfooter {
+    background: url(../img/searcharrow.png) no-repeat center center #dbdbdb;
+    width: 35px;
+    border: none;
+    /* padding: 17px 0px;*/
+    height: 34px;
+}
+
+.socialicons {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #ec682a;
+    margin-left: 15px;
+}
+
+.paymentcards {
+    margin-top: 15px;
+    margin-left: 10px;
+    /* margin-top: 29px;
+    text-align: right; */
+}
+
+.copyright {
+    border-top: solid 2px #ec682a;
+    padding: 15px 0px;
+    font-size: 13px;
+    color: #747983;
+}
+
+.copyright a {
+    color: #747983;
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: #ec682a;
+    text-decoration: none;
+}
+
+.pageheading {
+    font-family: 'ubuntubold';
+    font-size: 15px;
+    color: #ec682a;
+    /*margin-bottom: 30px;*/
+    line-height: 15px;
+    padding-top: 10px;
+}
+
+.pageheading a {
+    color: #ec682a;
+    text-decoration: none;
+}
+
+.pageheading a:hover {
+    color: #ec682a;
+    text-decoration: underline;
+}
+
+.pagesubheading {
+    font-family: 'questrialregular';
+    font-size: 14px;
+    color: #000;
+}
+
+.pagesubheading a {
+    color: #ec682a;
+    text-decoration: none;
+}
+
+.pagesubheading a:hover {
+    color: #ec682a;
+    text-decoration: underline;
+}
+
+.pagesubsubheading {
+    font-family: 'questrialregular';
+    font-size: 13px;
+    color: #757a80;
+}
+
+.pagesubsubheading a {
+    color: #757a80;
+    text-decoration: none;
+}
+
+.pagesubsubheading a:hover {
+    color: #757a80;
+    text-decoration: underline;
+}
+
+
+/****************************************************************************************************
+Inner pages css start here
+****************************************************************************************************/
+
+.innercolgblackband {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 0px;
+    margin-top: 0px;
+}
+
+.servicesheadinginner {
+    font-size: 18px;
+    color: #bcbcbc;
+    line-height: 18px;
+}
+
+.innercolgheadcont {
+    margin-top: 80px;
+}
+
+.innercolgheadcont1 {
+    margin-top: 145px;
+}
+
+.innercolgheadcont2 {
+    margin: 100px 0px 145px 0px;
+}
+
+.innercolgheadbigtext {
+    font-family: 'ubuntumedium';
+    font-size: 30px;
+    color: #fff;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin-top:270px;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+
+.innercolgsubheadtext {
+    font-family: 'ubuntumedium';
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 0px -2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.innercolgtext {
+    font-size: 13px;
+    color: #fff;
+    line-height: 18px;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9);
+    border-top: solid 1px #fff;
+    margin: 30px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
+}
+
+.innercolgtext a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.innercolgtext a:hover {
+    color: #ec682a;
+    text-decoration: underline;
+}
+
+.leftboxesbgsearch {
+    background: #f2f3f5;
+    padding: 13px 10px;
+    border-top: solid 2px #dde2ea;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.attraction-booking-info-block {
+    background: #f2f3f5;
+    padding: 13px 10px;
+    border-top: solid 2px #dde2ea;
+    margin-bottom: 20px;
+    max-height: 700px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.attraction-booking-info-preview-block {
+    max-height: 500px;
+    
+    /*overflow: auto;*/
+}
+
+.totals .currency-sign {
+    top: 4px;
+    position: relative;
+}
+
+.leftboxheading {
+    background: url(../img/arrowdown.png) no-repeat right center;
+    font-size: 16px;
+    color: #0b1110;
+    line-height: 16px;
+}
+
+.leftboxheadingorange {
+    font-size: 16px;
+    color: #e05d20;
+}
+
+.leftboxescont {
+    margin-top: 10px;
+}
+
+.leftboxescont ul {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.leftboxescont ul li {
+    list-style-type: none;
+    margin: 0px 0px;
+    padding: 3px 0px;
+    font-size: 13px;
+    color: #484848;
+}
+
+.searchbtnleft {
+    border-radius: 5px;
+    background: #e76325;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.popularcont {
+    margin-top: 10px;
+}
+
+.popularcont ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.popularcont li {
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    display: inline;
+    margin: 0px 0px 0px 0px;
+}
+
+.popularcont li a {
+    background: #fff;
+    border-radius: 5px;
+    border: solid 1px #d7dbe1;
+    list-style: none;
+    color: #484848;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 6px 10px;
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-right: 5px;
+}
+
+.popularcont li a:hover {
+    background: #ec682a;
+    border: solid 1px #d7dbe1;
+    padding: 6px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.popularcont_selected {
+    background: #ec682a !important;
+    border: solid 1px #d7dbe1;
+    padding: 6px 10px;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.innerheadingbg {
+    background: #dde2ea;
+    font-size: 16px;
+    color: #0b1110;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.textorange16bold {
+    font-family: 'ubuntubold';
+    font-size: 16px;
+    color: #e96628;
+}
+
+.textorange20 {
+    font-family: 'ubuntulight';
+    font-size: 20px;
+    color: #e96628;
+}
+
+.textorange22boldprice {
+    font-family: 'ubuntubold';
+    font-size: 22px;
+    color: #e96628;
+    margin: 5px 0px;
+}
+
+.textorange26mediumprice {
+    font-family: 'ubuntumedium';
+    font-size: 26px;
+    color: #e96628;
+    margin: 5px 0px;
+}
+
+.textlightgray12 {
+    font-size: 12px;
+    color: #757a80;
+}
+
+.textlightgray13 {
+    font-size: 13px;
+    color: #7b7b7b;
+}
+
+.textorange13 {
+    font-size: 13px;
+    color: #e86527;
+}
+
+.textorange13 a {
+    color: #e86527;
+    text-decoration: none;
+}
+
+.textorange13 a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.textgray16medium {
+    font-family: 'ubuntumedium';
+    font-size: 15px;
+    color: #a4a6a9;
+    text-decoration: line-through;
+}
+
+.textgray16bold {
+    font-family: 'ubuntubold';
+    font-size: 16px;
+    color: #484848;
+}
+
+.textlightgraycancel {
+    font-size: 11px;
+    color: #9e9e9e;
+    text-align: right;
+    font-style: italic;
+}
+
+.listgridviewband {
+    margin: 0px;
+    float: right;
+}
+
+.listgridviewband ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.listgridviewband ul li {
+    list-style-type: none;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    display: inline-block;
+    font-size: 12px;
+    color: #757a80;
+}
+
+.listgridviewband a {
+    color: #757a80;
+    text-decoration: none;
+}
+
+.listgridviewband a:hover {
+    color: #e25e21;
+    text-decoration: none;
+}
+
+.listboxband {
+    margin-bottom: 20px;
+}
+
+.newofferband {
+    position: absolute;
+    width: 62px;
+    height: 49px;
+    margin-top: -5px;
+    z-index: 10;
+}
+
+.listbox {
+    border: solid 1px #dde2ea;
+    padding: 10px;
+    -webkit-box-shadow: 0px 3px 2px -2px rgba(218, 222, 227, 1);
+    -moz-box-shadow: 0px 3px 2px -2px rgba(218, 222, 227, 1);
+    box-shadow: 0px 3px 2px -2px rgba(218, 222, 227, 1);
+    margin-bottom: 5px;
+}
+
+.listpriceoffer {
+    font-family: 'ubuntulight';
+    text-align: right;
+    font-size: 12px;
+    color: #757a80;
+    line-height: 18px;
+}
+
+.addtolistbtn {
+    border-radius: 5px;
+    background: url(../img/addtolisticon.png) no-repeat left center #dde2ea;
+    border: none;
+    font-size: 13px;
+    color: #757a80;
+    padding: 7px 10px 7px 40px;
+}
+
+.addtolistbtn.active {
+    background-image: url(../img/addtolisticon-active.png);
+}
+
+.learnmoretbtn {
+    border-radius: 5px;
+    background: url(../img/learnmoreicon.png) no-repeat left center #e86527;
+    border: none;
+    font-size: 13px;
+    color: #fff;
+    padding: 7px 10px 7px 40px;
+}
+
+.listviewboxheading {
+    font-size: 16px;
+    color: #000;
+    line-height: 18px;
+}
+.listviewboxheading>a {
+    color: #000;
+}
+
+.listviewboxmiddle {
+    font-size: 13px;
+    color: #9e9e9e;
+    border-top: solid 1px #bbbbbb;
+    border-bottom: solid 1px #bbbbbb;
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+
+.listviewboxmiddle ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.listviewboxmiddle ul li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 3px 0px;
+}
+
+listviewboxicons {
+    margin: 0px;
+    padding: 0px;
+}
+
+.listviewboxicons-icon {
+    /*background-image: url(../img/listviewboxicons.png);*/
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 31px;
+    line-height: 31px;
+    margin: 0 1px 2px 0;
+    vertical-align: middle;
+    width: 31px;
+}
+
+.listviewboxicons-ico01 {
+    background-position: 0px -31px;
+}
+
+.listviewboxicons-ico01dis {
+    background-position: 0px 0px;
+}
+
+.listviewboxicons-ico02 {
+    background-position: -31px -31px;
+}
+
+.listviewboxicons-ico02dis {
+    background-position: -31px 0px;
+}
+
+.listviewboxicons-ico03 {
+    background-position: -62px -31px;
+}
+
+.listviewboxicons-ico03dis {
+    background-position: -62px 0px;
+}
+
+.listviewboxicons-ico04 {
+    background-position: -93px -31px;
+}
+
+.listviewboxicons-ico04dis {
+    background-position: -93px 0px;
+}
+
+.listviewboxicons-ico05 {
+    background-position: -124px -31px;
+}
+
+.listviewboxicons-ico05dis {
+    background-position: -124px 0px;
+}
+
+.listviewboxicons-ico06 {
+    background-position: -155px -31px;
+}
+
+.listviewboxicons-ico06dis {
+    background-position: -155px 0px;
+}
+
+.listviewboxicons-ico07 {
+    background-position: -186px -31px;
+}
+
+.listviewboxicons-ico07dis {
+    background-position: -186px 0px;
+}
+
+.listviewboxicons-ico08 {
+    background-position: -217px -31px;
+}
+
+.listviewboxicons-ico08dis {
+    background-position: -217px 0px;
+}
+
+.listviewboxicons-ico09 {
+    background-position: -248px -31px;
+}
+
+.listviewboxicons-ico09dis {
+    background-position: -248px 0px;
+}
+
+.listviewboxicons-ico10 {
+    background-position: -279px -31px;
+}
+
+.listviewboxicons-ico10dis {
+    background-position: -279px 0px;
+}
+
+.listviewboxicons-ico11 {
+    background-position: -310px -31px;
+}
+
+.listviewboxicons-ico11dis {
+    background-position: -310px 0px;
+}
+
+.listviewboxicons-ico12 {
+    background-position: -341px -31px;
+}
+
+.listviewboxicons-ico12dis {
+    background-position: -341px 0px;
+}
+
+.listviewboxicons-ico13 {
+    background-position: -372px -31px;
+}
+
+.listviewboxicons-ico13dis {
+    background-position: -372px 0px;
+}
+
+.listviewboxicons-ico14 {
+    background-position: -403px -31px;
+}
+
+.listviewboxicons-ico14dis {
+    background-position: -403px 0px;
+}
+
+.listviewboxicons-ico15 {
+    background-position: -434px -31px;
+}
+
+.listviewboxicons-ico15dis {
+    background-position: -434px 0px;
+}
+
+.aboutsection {
+    margin-top: 10px;
+    padding-top: 25px;
+    border-top: solid 1px #767676;
+    font-size: 13px;
+    color: #484848;
+    line-height: 22px;
+}
+
+.youmaylikesec {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: solid 1px #767676;
+}
+
+.gridpriceoffer {
+    font-family: 'ubuntulight';
+    font-size: 12px;
+    color: #757a80;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+.gridviewboxheading {
+    font-size: 16px;
+    color: #000;
+    line-height: 18px;
+    margin-top: 10px;
+    height: 45px;
+}
+.gridviewboxheading>a {
+    color: #000;
+}
+
+.gridpriceoffer .price-block {
+    /*height: 82px;*/
+}
+
+.gridpriceoffer .buttons {
+    margin: 15px 0;
+}
+
+.gridpriceoffer .buttons a.addtolistbtn {
+    border-radius: 5px;
+    background: #dde2ea;
+    border: none;
+    font-size: 12px;
+    color: #757a80;
+    padding: 7px 10px 7px 10px;
+}
+
+.gridpriceoffer .buttons a.learnmoretbtn {
+    border-radius: 5px;
+    background: #e86527;
+    border: none;
+    font-size: 12px;
+    color: #fff;
+    padding: 7px 10px 7px 10px;
+}
+
+.listpriceoffer .buttons a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.addtolistbtnactivity {
+    border-radius: 5px;
+    background: #dde2ea;
+    border: solid 1px #d2d7e0;
+    font-size: 15px;
+    color: #757a80;
+    padding: 10px 10px 10px 10px;
+}
+
+.learnmoretbtnactivity {
+    border-radius: 5px;
+    background: #e86527;
+    border: solid 1px #dc672f;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+}
+
+.textorange22boldpricegrid {
+    font-family: 'ubuntubold';
+    font-size: 22px;
+    color: #e96628;
+    margin: 10px 0px;
+}
+
+.gridbox {
+    border: solid 1px #dde2ea;
+    padding: 10px;
+    -webkit-box-shadow: 0px 3px 2px -2px rgba(218, 222, 227, 1);
+    -moz-box-shadow: 0px 3px 2px -2px rgba(218, 222, 227, 1);
+    box-shadow: 0px 3px 2px -2px rgba(218, 222, 227, 1);
+    margin-bottom: 30px;
+}
+
+.innercolgheadsmalltext {
+    font-family: 'ubuntumedium';
+    font-size: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 50px;
+}
+
+.innercolgheadsmalltext2 {
+    font-family: 'ubuntumedium';
+    font-size: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+.price-group-section {
+    margin-bottom: 10px;
+    border-bottom: solid 1px #c7c8bb;
+    font-size: 13px;
+    color: #292929;
+}
+
+.price-group-section .form-group {
+    /*margin-bottom: 15px;*/
+}
+
+.textgray15heading {
+    font-size: 15px;
+    color: #292929;
+    margin-bottom: 15px;
+}
+
+.textgray26heading {
+    font-size: 26px;
+    color: #7b7b7b;
+    margin-bottom: 5px;
+}
+
+.textgray22price {
+    font-size: 16px;
+    color: #7b7b7b;
+    margin-top: 7px;
+}
+
+.textfieldquantity {
+    background: #fff;
+    border: solid 1px #c7c8bb;
+    padding: 7px 7px;
+    font-size: 13px;
+    color: #959595;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.needhelp {
+    margin: 10px 0px 30px 0px;
+    font-size: 13px;
+    color: #484848;
+}
+
+.needhelp ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.needhelp ul li {
+    list-style-type: disc;
+    margin: 0px 0px 0px 13px;
+    padding: 5px 0px 5px 0px;
+    font-size: 11px;
+    color: #484848;
+    line-height: 16px;
+}
+
+.needhelp ul li span {
+    font-size: 13px;
+}
+
+.propertybox {
+    background: #fcc5b4;
+    padding: 15px 15px;
+    font-size: 13px;
+    color: #484848;
+    line-height: 22px;
+}
+
+.propertyheadtext {
+    font-family: 'questrialregular';
+    font-size: 26px;
+    color: #a9310b;
+    margin-bottom: 5px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'ubuntubold';
+    color: #111111;
+    text-transform: uppercase;
+}
+
+.activityheadingbg {
+    background: #f2f3f5;
+    font-size: 13px;
+    color: #484848;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.activitycontsection {
+    margin: 15px 0px;
+}
+
+.textgray13cont {
+    font-size: 13px;
+    color: #484848;
+    line-height: 22px;
+    /*text-align: justify;*/
+}
+
+.textgray13cont ul {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.textgray13cont ul li {
+    list-style-type: disc;
+    margin: 0px 0px 0px 13px;
+    padding: 2px 0px;
+    /*font-size: 11px;*/
+}
+
+.textgray13cont ul li span {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.reviewbox {
+    background: #f2f3f5;
+    padding: 15px 15px;
+}
+
+.showmorebtn {
+    background: #fff;
+    padding: 8px 10px 8px 10px;
+    border: solid 1px #ec682a;
+    color: #ec682a;
+    font-size: 15px;
+    text-align: center;
+}
+
+.showmorebtn:hover, .showmorebtn:active, .showmorebtn:visited, .showmorebtn:focus {
+    text-decoration: none;
+}
+
+.destinations .destinationsImg {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.destinations .destinationsImg .details2 {
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    height: 75px;
+    padding: 10px 10px;
+    position: absolute;
+    transition: all 0.5s ease-out 0s;
+    width: 100%;
+}
+
+.destinations .destinationsImg:hover {
+    cursor: pointer;
+}
+
+.destinations .destinationsImg:hover .details2 {
+    height: 100%;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.destinationsheading {
+    font-family: 'ubuntulight';
+    font-size: 22px;
+    color: #fff;
+    line-height: 22px;
+    padding-bottom: 8px;
+    border-bottom: solid 1px #fff;
+    margin-bottom: 6px;
+}
+
+.textwhitedest14 {
+    font-size: 14px;
+    color: #fff;
+}
+
+.textwhitedest13 {
+    font-family: 'ubuntulight';
+    font-size: 13px;
+    color: #fff;
+}
+
+.textwhitedest13 ul {
+    margin: 5px 0px 0px 0px;
+    padding: 0px 0px;
+}
+
+.textwhitedest13 ul li {
+    font-size: 11px;
+    margin: 0px 0px 0px 13px;
+    padding: 0px 0px;
+}
+
+.textwhitedest13 ul li span {
+    font-size: 13px;
+}
+
+.textpopuptitleorange {
+    font-size: 30px;
+    color: #ec682a;
+}
+
+.textpopup16black {
+    font-size: 16px;
+    color: #000;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.poupsocialiconbox {
+    border-top: solid 1px #8b8b8b;
+    padding: 20px 30px 15px 30px;
+    text-align: center;
+}
+
+.line-titlepop {
+    border-bottom: 1px solid #767676;
+    margin: 0px 0px 20px 0px;
+    height: 11px;
+    text-align: center;
+}
+
+.line-titlepop span {
+    background: #FFF;
+    padding: 0px 10px;
+    border: solid 0px #ec682a;
+    color: #8b8b8b;
+    font-size: 15px;
+}
+
+.textblack13 {
+    font-size: 13px;
+    color: #262626;
+}
+
+.imgshadow {
+    background: url(../img/imgshadow.png) repeat-x center top;
+}
+
+.imgshadow-home {
+    background: url(../img/imgshadow.png) repeat-x center top;
+    height: 183px;
+    position: absolute;
+    z-index: 98;
+    width: 100%;
+}
+
+.productbox {
+    border-top: 5px solid #e86527;
+    /* width:100%; */
+    background-color: #ff;
+    padding: 30px 15px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.attraction-product-price-group {}
+
+.attraction-product-price-group:not(:last-child) {
+    border-bottom: 1px solid #d3d4d5;
+    margin-bottom: 15px;
+}
+
+.attraction-product-extra-details {
+    margin: 0 0 20px 0;
+}
+
+.attraction-product-details {
+    border-top: 1px solid #B8B8B8;
+    border-bottom: 1px solid #B8B8B8;
+    display: table;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.attraction-product-details-info {
+    padding: 0 10px;
+    text-align: center;
+    display: table-cell;
+    float: none;
+}
+
+.attraction-product-details-info:not(:first-child) {
+    border-left: 1px solid #B8B8B8;
+}
+
+.attraction-product-details-info > .title {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.attraction-product-details-info > .icon-image {
+    margin: 10px;
+}
+
+#innerleftmenu {
+    font-family: "ubunturegular";
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+}
+
+#innerleftmenu ul {
+    font-family: "ubunturegular";
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#innerleftmenu li {
+    font-family: "ubunturegular";
+    /*background: #0E243A;*/
+    color: #ffffff !important;
+    list-style: none;
+    display: block;
+}
+
+#innerleftmenu li a {
+    list-style: none;
+    display: block;
+    background: #0E243A;
+    color: #ffffff;
+    font-family: "ubunturegular";
+    font-size: 14px;
+    font-weight: normal;
+    padding: 9px 9px;
+}
+
+#innerleftmenu li a:hover {
+    font-family: "ubunturegular";
+    background: #F36636;
+    padding: 9px 9px;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+#innerleftmenu li.active a {
+    font-family: "ubunturegular";
+    background: #F36636;
+    padding: 9px 9px;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 0px 4px 0px;
+    z-index: 10000;
+    transition: all 0.2s ease-in-out;
+    height: auto;
+    background-color:transparent;  
+    /* text-align: center;*/
+    /*line-height: 40px;*/
+}
+
+.header.active {
+    background-color: #333333 !important;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35) !important;
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35) !important;
+    /*border-bottom:1px solid #2E61B4;*/
+}
+
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 0px 4px 0px;
+    z-index: 10000;
+    transition: all 0.2s ease-in-out;
+    height: auto;
+    background-color: #0a1929;  
+    /*text-align: center;
+    line-height: 40px;*/
+}
+
+.header1.active {
+    background-color: #333333 !important;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35) !important;
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35) !important;
+    /*border-bottom:1px solid #2E61B4;*/
+}
+.contentareamargin {
+    margin-top: 110px;  
+}
+
+.careerhband {
+    margin-top: 250px;
+    padding: 0px 0px;
+    position:relative;
+}
+
+.careercollage {
+    background: url(../img/career_collage.jpg) no-repeat center top;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;    
+}
+
+.careerheadtext {
+    font-family: 'ubuntumedium';
+    font-size: 35px;
+    color: #ec682a;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-top:0px;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+    text-align: center;
+    margin-bottom:15px;
+}
+
+.careercont {
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center; 
+}
+
+/****************************************************************************************************
+Media Query css start here
+****************************************************************************************************/
+
+@media screen and (max-width: 800px) {
+
+
+    .viewallhomepage{display: none;}
+    .colimgtagline{
+        position:absolute;
+        z-index:999999999;
+        right:1.5%;
+        top:80%;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        line-height:14px;
+        font-weight: normal;
+        color:#fff;
+        background:rgba(0,0,0,0.7);
+        border-radius:4px;
+        text-shadow: 0 1px 1px #000;    
+    }
+    .attraction-title {
+        color: #006acc;
+        margin: 9px;
+    }
+    .attractionImgeGallery{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .attraction-product-details-info {
+        padding: 0 10px;
+        text-align: center;
+        display: inline;
+        float: none;
+    }
+    .textblack35head {
+        font-weight: normal;
+    }
+
+    .topbandcollg {
+        margin: 0px 0px;
+        width: 100%;
+    }
+    .attraction-product-details-info:not(:first-child) {
+        border-left: 0px;
+    }
+    .toplinkmob {
+        display: none;
+        padding: 0px;
+    }
+    .toplinks ul li {
+        padding: 10px 6px;
+    }
+    .searchband {
+        margin-top: 160px;
+    }
+    .tagline img {
+        width: 450px;
+    }
+    .attraction .attractionImg .details1 {
+        height: 113px;
+        padding: 10px 5px 10px 5px;
+    }
+    .attraction .attractionImg:hover .details1 {
+        height: 113px;
+        cursor: pointer
+    }
+    .innercolgblackband {
+        display: none;
+    }
+    .listviewboxheading {
+        margin-top: 10px;
+    }
+    .listpriceoffer {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .gridviewboxheading {
+        height: 85px;
+    }
+    .paymentcards {
+        margin-top: 10px;
+        text-align: left;
+    }
+    .innercolgheadsmalltext {
+        margin-bottom: 20px;
+    }
+    .rowmargin1 {
+        margin-top: 30px;
+    }
+    .destinations .destinationsImg:hover .details2 {
+        height: 75px;
+    }
+    .poupsocialiconbox {
+        padding: 20px 0px 15px 0px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+.foundercenter{
+    text-align: center;
+}
+    .innercolgheadcont3 {
+    margin-bottom:30px;
+}
+    .textblack30head {
+        text-align: center;
+    }
+    .innerPageSeachbox{
+        width:100% !important;
+        height:35px !important;
+        font-size: 13px !important;
+    }
+    .contentarea{
+        margin:0px;
+    }
+    .searchbg {
+        margin-top:41%;
+    }
+    .tagline {
+        font-size:20px;
+    }
+    .attraction-product-details-info {
+        padding: 0 10px;
+        text-align: center;
+        display: inline;
+        float: none;
+    }
+    .tagline img {
+        width: 290px;
+    }
+    .searchband {
+        margin-top: 40px;
+    }
+    .rowmargin {
+        margin-top: 30px;
+    }
+    .attraction .attractionImg .details1 {
+        height: 113px;
+        padding: 10px 10px 10px 10px;
+    }
+    .attraction .attractionImg:hover .details1 {
+        height: 113px;
+        cursor: pointer
+    }
+    .footermenu {
+        border-left: none;
+        border-right: none;
+        border-top: solid 1px #adb3bc;
+        border-bottom: solid 1px #adb3bc;
+        padding: 25px 0px;
+    }
+    .listgridviewband {
+        margin: 0px;
+        float: left;
+    }
+    .listgridviewband ul li {
+        margin: 0px 10px 0px 0px;
+    }
+    .gridviewboxheading {
+        height: auto;
+    }
+.careerhband {
+    margin-top: 150px;
+}
+
+}
+
+@media screen and (max-width: 360px) {
+    .contentareamargin {
+        margin-top: 136px;   
+    }
+    
+    .careerhband {
+    margin-top: 200px;
+}
+    .smallTaglineHome{
+        display: none !important;        
+    }
+
+    .hovereffect a.info {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        display: inline-block;
+        font-size: 10px;
+        margin: 0px;
+        opacity: 0;
+        padding: 110px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out 0s;
+    }
+    .attraction-product-details-info {
+        padding: 0 10px;
+        text-align: center;
+        display: inline;
+        float: none;
+    }
+    .searchband {
+        margin-top: 10px;
+    }
+
+    .innercolgheadbigtext {
+        font-family: 'ubuntumedium';
+        font-size: 25px;
+        color: #fff;
+        line-height: 35px;
+        text-transform: uppercase;
+        margin-top:226px;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+    }
+
+
+}
+
+.reviewbox .heading {
+    border-bottom: 1px solid #d3d4d5;
+}
+
+.reviewbox #attractionsComments .attractionComment {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.reviewbox #attractionsComments .attractionComment:not(:last-child) {
+    border-bottom: 1px solid #d3d4d5;
+}
+
+
+/* BX Slider UI Changes */
+
+#home-slides .bx-wrapper {
+    margin-bottom: 0;
+}
+
+#home-slides .bx-wrapper img {
+    margin: auto !important;
+    display: block !important;
+    object-fit: cover;
+}
+
+#home-slides .bx-wrapper .bx-viewport {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    left: 0;
+}
+
+#home-slides .bx-wrapper .bx-pager, #home-slides .bx-wrapper .bx-controls-auto {
+    bottom: 8px;
+}
+
+#home-slides .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #FFF;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+}
+
+#home-slides .bx-wrapper .bx-pager.bx-default-pager a:hover, #home-slides .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #EC682A;
+}
+
+
+@media screen and (max-width: 800px) {
+
+   .attraction-product-details-info {
+    padding: 0 10px;
+    text-align: center;
+    display: inline;
+    float: none;
+}
+#home-slides .bx-wrapper, #home-slides .bx-viewport, #home-slides .bx-wrapper img {}
+.paymentcards {
+    margin-top: 27px;
+}
+    /*.tagline {
+        text-align: center;
+        padding: 0px;
+        margin-bottom: 16px;
+        }*/
+    }
+
+    @media screen and (max-width: 640px) {
+       .betaWord{
+        color: white;
+        right: -140px;
+        top: -41px;
+        padding: 0;
+        display: inline-block;
+        position: relative;
+
+    }
+    .attraction-product-details-info {
+        padding: 0 10px;
+        text-align: center;
+        display: inline;
+        float: none;
+    }
+    #home-slides .bx-wrapper, #home-slides .bx-viewport, #home-slides .bx-wrapper img {
+        max-height: 400px !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+   .betaWord{
+    color: white;
+    right: -92px;
+    top: -29px;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+
+}
+.attraction-product-details-info {
+    padding: 0 10px;
+    text-align: center;
+    display: inline;
+    float: none;
+}
+#home-slides .bx-wrapper, #home-slides .bx-viewport, #home-slides .bx-wrapper img {
+    max-height: 320px !important;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+}

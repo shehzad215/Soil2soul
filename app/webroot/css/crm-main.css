@@ -1,0 +1,141 @@
+.logoClass1{
+	width:100%; height:170px; border:1px solid #333; margin:0px 0px 10px 0px; cursor: pointer;
+}
+.logoClass1:hover {transform: scale(1.1); transition: all 200ms ease-in; z-index: 2;}
+#image-gallery .modal-footer{
+  display: block;
+}
+.navbar{
+   margin-bottom: 0px !important;
+ } 
+.navbar-default {
+	/*background-color: #2b3643 !important;*/
+  background: linear-gradient(to bottom, #020111 10%, #3a3a52 100%);
+    border-color: #2b3643 !important;min-height: 33px !important;margin-bottom: 0px !important:
+}
+.navbar-default .navbar-nav > li > a {
+	color: #fff;font-weight: 500;padding: 5px 10px !important;
+}
+.navbar-default .navbar-nav > li > a:hover {
+	color: #000;background: #fff; border-bottom: 0px solid #000;
+}
+.nav-pills, .nav-tabs {
+	margin-bottom: 12px !important;border: 0px;
+ }	
+.nav-tabs a {
+	padding: 10px;border-right: 0px solid #ccc;margin: 0px;background: #fff;color: #737373;font-size: 14px;
+}
+.nav-tabs a:hover{
+	text-decoration: none;background: #82b4f3;color: #fff;
+}
+.active{
+	background: #eee;
+	border-bottom: 3px solid #36c6d3; 
+	color: #333 !important;
+}
+/*.active:hover{
+	background: #82b4f3;color: #fff;border-bottom: 3px solid #f0ad4e;
+}*/
+.breadcrumb>.active{
+	border-bottom: 0px solid #000 !important;
+  background: none;
+}
+.panel-default {
+	border-color: #fff !important;
+ }
+.panel-default>.panel-heading {
+	color: #fff;
+	background-color: #3598dc;
+	border-color: #ddd;
+	width:3% !important;
+	border:1px solid #3598dc;
+	border-bottom: 0px solid #ddd;
+        padding: 5px 10px !important;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border-top-color: #ddd;border: 1px solid #3598dc;
+}
+.label { line-height: 2 !important;}
+.linkrow{margin-bottom: 3px;}
+.form-control{border:1px solid #000 !important; text-transform: capitalize !important;}
+.select2-results .select2-result-label {text-transform: capitalize !important;}
+.table-scrollable thead th{ 
+	/*background: #3598dc;*/
+        background: linear-gradient(45deg, rgba(61,198,170,1) 0%, rgba(59,179,182,1) 100%) !important;
+      color:#fff !important;
+	border-right: 0 !important;
+	border-left: 0 !important;
+}
+.pre-enquery thead th{ 
+  background: #3598dc;color:#fff !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  text-align: center;
+  font-size: 12px !important; 
+}
+.btn:hover {transform: scale(1.1); transition: all 200ms ease-in; z-index: 2;}
+.table-toolbar {
+    margin-bottom: 10px !important;
+}
+.panel-group{
+   margin-bottom: 0px !important;		
+}
+.tabbable-line>.tab-content {margin-top: 0;border: 0;border-top: 1px solid #eef1f5;padding: 0px 0 !important;}
+.exporturl{margin-left: 5px !important;}
+.dashboard-stat2 {
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+ -o-border-radius: 4px;
+  border-radius: 4px;
+  background: #f0ad4e !important; 
+  padding: 7px 7px !important;
+   height: 50;
+}
+.dashboard-stat2:hover {transform: scale(1.1); transition: all 200ms ease-in; z-index: 2;}
+.dashboard-stat2, .dashboard-stat2 .display { margin-bottom: 10px ; }
+
+.dashboart-box{ width:12.5%; padding: 0px 5px; }
+.dashboart-box:first-child { 
+  padding-left:15px !important; 
+}
+.dashboard-stat2 .display .number small {font-size: 10px !important;color: #000;font-weight: 600;text-transform: uppercase;}
+.dashboard-stat2 .display .number h3 { margin: 0 0 2px;padding: 0;font-size: 20px;font-weight: 400; color:#000 !important;}
+.pagination>.disabled>span {border-color: #000 !important;}
+.pagination>li>a, .pagination>li>span{border-color: #000 !important;}
+
+.disabled {pointer-events:none; opacity:0.6;}
+.input-group-addon {border:1px solid #000 !important;}
+.input-group-addon > i { color: #000 !important;}
+.control-label .required, .form-group .required {color: #e02222;font-size: 14px !important;padding-left: 2px;}
+
+.excl-btn{margin-top: 5px !important;}
+
+.act-btn{padding: 3px !important; }
+.assiendtype {display: none;}
+.reports{background: #fff; padding:5px 10px; margin-bottom: 10px; box-shadow: 5px 8px #888888;}
+.reports:hover{transform: scale(1.1); transition: all 200ms ease-in; z-index: 2;}
+.reports ul{
+  padding-left:15px; 
+  list-style-type: square;
+}
+
+.reports li{
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+.assign_preenquiry{display: none;}
+
+.table > thead > tr > th, .table > thead > tr > th > a {
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 600;
+    /* text-align: left; */
+}
+
+
+
+
+
+
+

@@ -1,0 +1,392 @@
+/****************************************************************************************************
+Radio Button and Checkbox css start here
+****************************************************************************************************/
+
+label {
+    font-weight: normal;
+    white-space: nowrap;
+    width: 80%;
+}
+
+label + span {
+    float: right;
+	background:#d0e2c7;
+	color:#3b3e3b;
+	font-size:12px;
+	padding:3px 3px;
+	border-radius:3px;
+}
+
+label input {
+    position: absolute;
+    left: -1000px;
+    opacity: 0;
+}
+
+label input + span {
+    display: inline-block;
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    height: 14px;
+    width: 14px;
+    vertical-align: middle;
+}
+
+label input + span + span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    white-space: normal;
+    width: 90%;
+}
+
+label input:checked + span {
+    border: 1px solid #f4731c;
+}
+
+label input:checked + span:after {
+    content: "";
+    background-color: #f4731c;
+    height: 8px;
+    width: 8px;
+    display: block;
+    margin: 2px;
+}
+input[type=checkbox]:not(old), input[type=radio ]:not(old) {
+	margin:0;
+	padding:0;
+	opacity:0;
+	display:none;
+}
+input[type=checkbox]:not(old) + label, input[type=radio ]:not(old) + label {
+	display:block;
+}
+input[type=radio ]:not(old) + label > span {
+	display: inline-block;
+	width:15px;
+	height:15px;
+	margin:0px;
+	border: 1px solid #bababa;
+	border-radius : 10px;
+	background : #fff;
+	vertical-align : top;
+}
+input[type=checkbox]:not(old):checked + label > span, input[type=radio ]:not(old):checked + label > span {
+	background-color: #fff;
+
+}
+input[type=radio]:not(old):checked + label > span > span {
+	display: block;
+	width:7px;
+	height:7px;
+	margin:3px;
+	border-radius: 5px;
+	background: #f4731c;
+}
+
+
+/****************************************************************************************************
+Textfield & Button css start here
+****************************************************************************************************/
+
+.submit_btn1 {
+	color: #ffffff;
+	text-align: center;
+    line-height: normal;
+    border: solid 1px #673400;
+    background: #673400;
+	border-radius: 5px;
+	transition:0.4s;
+	margin-bottom: 2px;
+}
+.submit_btn1:hover, .submit_btn1:focus, .submit_btn1.focus {
+	text-decoration: none;
+	background:#432200;
+	border: solid 1px #432200;
+}
+.submit_btn2 {
+	color: #673400;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+    border: solid 1px #673400;
+    background: none;
+	border-radius: 5px;
+	transition:0.4s;
+	margin-bottom: 2px;
+}
+.submit_btn2:hover, .submit_btn2:focus, .submit_btn2.focus {
+	text-decoration: none;
+	background:#673400;
+	color: #ffffff;
+}
+.submit_btn3 {
+	color: #ffffff;
+	text-align: center;
+    line-height: normal;
+    border: solid 1px #5050d6;
+    background: #5050d6;
+	border-radius: 5px;
+	transition:0.4s;
+	margin-bottom: 2px;
+}
+.submit_btn3:hover, .submit_btn3:focus, .submit_btn3.focus {
+	text-decoration: none;
+	background:#4040b4;
+	border: solid 1px #4040b4;
+}
+.submit_btn4 {
+	color: #5050d6;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+    border: solid 1px #5050d6;
+    background: none;
+	border-radius: 5px;
+	transition:0.4s;
+	margin-bottom: 2px;
+}
+.submit_btn4:hover, .submit_btn4:focus, .submit_btn4.focus {
+	text-decoration: none;
+	background:#5050d6;
+	color: #ffffff;
+}
+.btnsm{
+	font-size: 15px;
+	font-weight: 500;
+	padding: 7px 15px;
+}
+.btnmd{
+	font-size: 16px;
+	font-weight: 500;
+	padding: 8px 20px;
+}
+.btnlg{
+	font-size: 17px;
+	font-weight: 500;
+	padding: 10px 20px;
+}
+.btnlgfullwidth {
+	width: 100%;
+	padding: 10px 0px;
+}
+.explorebtn {
+	padding: 8px 30px;
+	font-size: 17px;
+	color: #fff;
+	text-align:center;
+	border:solid 1px #fff;
+	background: none;
+	border-radius: 5px;
+	text-align: center;
+    transition:0.4s;
+	margin-top: 30px;
+}
+.explorebtn:hover, .explorebtn:focus, .explorebtn.focus {
+	background:#fff;
+	color: #673400;
+	text-decoration: none;
+}
+.viewallbtn {
+	padding: 8px 20px;
+	font-size: 17px;
+	color: #673400;
+	text-align:center;
+	border:solid 1px #673400;
+	background: none;
+	border-radius: 5px;
+	text-align: center;
+    transition:0.4s;
+}
+.viewallbtn:hover, .viewallbtn:focus, .viewallbtn.focus {
+	background:#673400;
+	color: #fff;
+	text-decoration: none;
+}
+.viewallbtn img {
+	height: 17px;
+}
+.addreviewbtn {
+	padding: 8px 20px;
+	font-size: 17px;
+	color: #fff;
+	text-align:center;
+	border:solid 1px #673400;
+	background: #673400;
+	border-radius: 5px;
+	text-align: center;
+    transition:0.4s;
+}
+.addreviewbtn:hover, .addreviewbtn:focus, .addreviewbtn.focus {
+	background:#432200;
+	color: #fff;
+	text-decoration: none;
+}
+.newslettertextfield {
+	background: #fde8d2;
+	border:none;
+	padding:0px 10px;
+	font-size:15px;
+	color:#643200;
+	width:100%;
+	height: 45px;
+	font-weight: 400;
+	border-radius: 5px 0px 0px 5px;
+}
+.newslettertextfield:focus {
+	outline: none;
+}
+.newslettertextfield::placeholder{
+	color:#643200;
+}
+.newsletterbtn {
+	background:#fde8d2;
+	height:45px;
+	border:solid 0px #09a48c;
+	font-size: 16px;
+	color: #643200;
+	padding: 0px 15px;
+	font-weight: 500;
+	border-radius: 0px 5px 5px 0px;
+}
+.blogsearchfield {
+	background: #fff;
+	border: solid 0px #d1d1d1;
+	padding: 0px 13px;
+	font-size: 16px;
+	color: #643200;
+	font-weight: 400;
+	width: 100%;
+	border-radius: 5px;
+	height: 45px;
+}
+.blogsearchfield:focus {
+	outline: none;
+}
+.blogsearchfield::-moz-placeholder {
+	color: #643200;
+	opacity: 1;
+}
+.blogsearchfield:-ms-input-placeholder {
+	color: #643200;
+}
+.blogsearchfield::-webkit-input-placeholder {
+	color: #643200;
+}
+.blogsearchfieldselect {
+	padding: 0px 13px;
+	font-size: 16px;
+	color: #643200;
+	font-weight: 400;
+	width: 100%;
+	border-radius: 5px;
+	height: 45px;
+	border: solid 0px #d1d1d1;
+	-webkit-appearance: none !important;
+	background: #fff url(../img/selectarrow1.png) no-repeat right center !important;
+}
+.blogsearchbtn {
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #391f04;
+	text-align:center;
+	font-weight: 700;
+	font-style: italic;
+	border:solid 1px #391f04;
+	background: #fff;
+	border-radius: 5px;
+	text-align: center;
+    transition:0.4s;
+	width: 100%;
+}
+.blogsearchbtn:hover, .blogsearchbtn:focus, .blogsearchbtn.focus {
+	background:#673400;
+	color: #fff;
+	text-decoration: none;
+}
+.sharebtn {
+	display:inline-block;
+	font-size:15px;
+	color: #312dce;
+    font-weight: 700;
+    text-align: center;
+    line-height: normal;
+    border: solid 0px #eb222a;
+    background: none;
+	border-radius: 100%;
+	transition:0.4s;
+	vertical-align: middle;
+	margin-top: 7px;
+}
+.sharebtn i {
+	font-size:16px;
+	padding-left: 5px;
+	vertical-align: middle;
+}
+.sharebtn:hover, .sharebtn:focus, .sharebtn.focus {
+	text-decoration: none;
+	color: #673400;
+}
+.genformlabel {
+	margin-bottom:5px;	
+}
+.genformlabel label {
+	font-size:16px !important;
+	color:#000;
+	line-height: 18px;
+	font-weight: 500;	
+}
+.currencyselect{
+	padding: 0px 13px;
+	font-size: 14px;
+	color: #494949;
+	font-weight: 400;
+	width: 100%;
+	border-radius: 5px;
+	height: 35px;
+	border: solid 1px #e4e4e4;
+	-webkit-appearance: none !important;
+	background: #fff url(../img/selectarrow.png) no-repeat right center !important;
+}
+
+
+
+/****************************************************************************************************
+Media Query css start here
+****************************************************************************************************/
+
+@media screen and (max-width : 992px) {
+.planbtn {
+	margin-top: 10px;
+    margin-bottom: 30px;
+}	
+
+	
+}
+
+@media screen and (max-width : 767px) {
+
+ 
+}
+
+@media screen and (max-width : 480px) {
+.explorebtn {
+	padding: 6px 20px;
+	font-size: 15px;
+	color: #fff;
+	margin-top: 10px;
+}
+.viewallbtn {
+	padding: 8px 15px;
+	font-size: 15px;
+}
+.addreviewbtn {
+	padding: 8px 15px;
+	font-size: 15px;
+}	
+	
+ 
+}
+
+
+

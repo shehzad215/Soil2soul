@@ -1,0 +1,397 @@
+
+.topband .logo {
+    background: url(../../img/logowhite.png) no-repeat center top;
+    height: 75px;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+}
+
+.topband.active .logo {
+    background: url("../../img/logo.png") no-repeat center top;
+    height: 75px;
+}
+
+/*.guideimg {
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    width: 134px;
+    height: 134px;
+    border-radius: 100%;
+    margin-bottom: 30px;
+}*/
+
+.testimonialsarea {
+    background: url(../../img/testimonialsbg.jpg) no-repeat center top !important;
+    background-size: cover !important;
+    padding: 60px 0px;
+
+}
+
+.testimonialsimg {
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    width: 100%;
+    height: 265px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.blogboxbigimg {
+    border-radius: 15px;
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+}
+
+.blogboxsmallimg {
+    border-radius: 15px;
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+}
+
+.journeyslistboximg {
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+}
+
+.journeyslistboxcontarea h3 {
+    background: url("../../img/logo_icon.png") no-repeat left top 2px;
+    padding-left: 44px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 30px;
+    color: #673400;
+    line-height: 32px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 10px
+} 
+
+.subjectscholarsimg {
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.blogcatboximg {
+    position: relative;
+    border-radius: 8px;
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    width: 100%;
+    height: 98px;
+    overflow: hidden;
+}
+
+.mostviewblogbox img {
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 12px;
+}
+
+.blogdetcatboximg {
+    position: relative;
+    border-radius: 8px;
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+}
+
+.blogsdetimg {
+    border-radius: 15px;
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    width: 100%;
+    height: 450px;
+}
+
+.upcomingjourneysboximg {
+    position: relative;
+    border-radius: 15px;
+    background: url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.photogalleryimg {
+    background:url(../../img/noimage.png) no-repeat center center #f5f5f5;
+    height:203px;   
+}
+
+.inclusions li{
+    list-style: none;
+    background: url("../../img/include.png") no-repeat left top;
+    color: #000;
+    font-size: 16px;
+    line-height: 17px;
+    padding-left: 22px;
+    padding-bottom: 8px;
+}
+
+.exclusions li{
+    list-style: none;
+    background: url("../../img/exclude.png") no-repeat left top;
+    color: #000;
+    font-size: 16px;
+    line-height: 17px;
+    padding-left: 22px;
+    padding-bottom: 8px;
+}
+
+.mostviewblogcont h6 {
+    font-size: 14px !important;
+    color: #000;
+    line-height: 20px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.blogboxdesc img {
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.visionmissionarea {
+    background: url(../../img/visionmissionbg.jpg) no-repeat center top;
+    background-size: cover;
+    padding: 60px 0px;
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: url(../../img/footerimg.png) no-repeat left bottom rgba(103,52,0,1);
+}
+
+.ourBrandPedding{
+    padding-top: 0px;
+}
+/*.trishul {
+  background: url("../../img/trishul.png") no-repeat left 0 top 360px !important;
+}*/
+
+/*.diya {
+  background: url("../../img/diya.png") no-repeat right 80px top 0px #f7f7f7 ;
+}*/
+
+/*.kalash {
+  background: url("../../img/kalash.png") no-repeat left 0px top 280px #f7f7f7 ;
+}
+
+.deep {
+    background: url(../../img/deep.png) no-repeat right 0px bottom 0px;
+}
+
+.nandi {
+    background: url(../../img/nandi.png) no-repeat right 60px bottom 0px #f7f7f7;
+}
+
+.diyasm {
+    background: url(../../img/diyasm.png) no-repeat right 80px top 0px #f7f7f7;
+}*/
+
+/*# sourceMappingURL=bootstrap.css.map */
+.accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: url('../../img/upbow.png'); /* adjust as needed, taken from bootstrap.css */
+    float: right; /* adjust as needed */
+    color: #673400; /* adjust as needed */
+    position: relative;
+    margin-left: 0px;
+    margin-top: -22px;
+    font-size: 15px;
+    text-align: right;
+}
+.accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: url('../../img/downbow.png'); /* adjust as needed, taken from bootstrap.css */
+    position: relative;
+}
+
+.sharebtn i {
+    font-size: 16px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.infobox {
+    background-color: #f7f7f7;
+    color: #494949;
+    font-size: 16px;
+    border-radius: 12px;
+    line-height: 22px;
+    padding: 20px;
+    margin-bottom: 12px;
+    min-height: 140px !important;
+}
+
+.infobox h4 {
+    font-size: 20px !important;
+}
+
+
+.journeyslistboxcontarea h4 {
+  background: url("../../img/logo_icon.png") no-repeat left top -1px;
+  padding-left: 44px;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 22px;
+  color: #673400;
+  line-height: 25px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.fixedsocialicons ul li:nth-child(4) {
+    border-radius: 0px 0px 0px 0px !important;
+}
+
+.fixedsocialicons ul li:nth-child(5) {
+    background: #FF0000;
+    border-radius: 0px 0px 0px 5px;
+}
+
+/* Style the select element */
+#currencySelect {
+    padding: 4px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 50px; /* Adjust width as needed */
+}
+
+/* Style the options within the select */
+#currencySelect option {
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Style the selected option */
+#currencySelect option:checked {
+    background-color: #007bff; /* Change color as needed */
+    color: #fff;
+}
+
+.JourneyMap{
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/*.price p{
+    color: #673400;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 16px;
+}*/
+
+.navigation-portrait .nav-menu > li:first-child {
+    width: 100%;
+    position: relative;
+    border-top: solid 0px #f0f0f0;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.broucher{
+    border: 1px solid #673400;
+    border-radius: 6px;
+    color: #673400;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    background: #ffc107;
+}
+
+.journeyslistboxcontarea h5 {
+    
+    font-family: 'Philosopher', sans-serif;
+    font-size: 17px;
+    color: #ff4642;
+    line-height: 20px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-top:0px ;
+}
+.journeyslistboxcontarea h5 a {
+    color: #ff4642;
+    text-decoration: none;
+}
+.journeyslistboxcontarea h5 a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.journeyDate{
+    cursor: pointer;
+}
+
+.videotestim{
+    margin-bottom: 30px;
+}
+
+.videotestim img{
+    width: 100%;
+    height: 200px;
+     object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.videoimgbox img{
+      width: 100%;
+    height: 200px;
+     object-fit: cover;
+    object-position: 50% 50%;
+}
+
+
+.touravailable {
+    background-color: #049e0b !important;
+    color: #fff !important;
+    font-size: 13px;
+    padding: 3px 7px;
+    border-radius: 3px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.scholarbox{
+    min-height: 350px !important;
+}
+
+.videoimgboxplay {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background: url(../../img/playbtn.png) no-repeat center center;
+    z-index: 2;
+    transform: translate(128px, 64px);
+    display: inline-block;
+}
+
+
+
+@media screen and (max-width : 767px) {
+.topband .logo {
+    background: url(../../img/logowhite_mob.png) no-repeat left top;
+    height: 60px;
+    position: relative;
+    z-index: 99;
+    text-align: left;
+}
+
+.topband.active .logo {
+    background: url("../../img/logo_mob.png") no-repeat left top;
+    height: 60px;
+}
+}
+

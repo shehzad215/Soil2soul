@@ -1,0 +1,156 @@
+body {
+	margin:0px;
+	padding:0px;
+	font-family: 'Poppins', sans-serif;
+	font-size:13px;
+	color:#000;
+	font-weight:400;
+}
+.mainwrapper {
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+.loginbg {
+	background: url("../../img/login_bk.jpg") no-repeat center top;
+	background-size: cover;
+	height: 100vh;
+	padding: 50px 0px;
+}
+.loginbox {
+	background: #fff;
+	padding: 20px 20px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+}
+.loginbox h2 {
+	font-size: 22px;
+	color: #000;
+	line-height: 22px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+.logo {
+	margin-bottom: 10px;	
+	text-align: center;
+}
+.logo img {
+	height: 100px;
+}
+.companyname {
+    font-size: 18px;
+    color: #673400;
+    line-height: 20px;
+    font-weight: 600;
+	text-align: center;
+	border-bottom: dotted 1px #636363;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+}
+.companyname span {
+    font-size: 15px;
+}
+.loginfiledmar {
+	margin-bottom: 20px;
+}
+.logintextfield {
+	background:#e2f0f6;
+	border:solid 0px #ebebeb;
+	padding: 10px 10px;
+	font-size: 14px;
+	color:#1d246f;
+	width:100%;
+	border-radius:5px;
+}
+.logintextfield:focus {
+	outline: none;
+}
+.logintextfield::-moz-placeholder {
+	color:#000;
+	opacity:1;
+}
+.logintextfield:-ms-input-placeholder {
+	color:#000;
+}
+.logintextfield::-webkit-input-placeholder {
+	color:#000;
+}
+.loginbtn {
+	padding:8px 20px;
+	font-size:14px;
+	color:#fff;
+	text-align:center;
+	background-image:none;
+	border:solid 0px #fff;
+	background: #673400;
+	border-radius:5px;
+	transition: color .3s, background .3s;
+}
+.loginbtn:hover, .loginbtn:focus, .loginbtn.focus {
+	background:#673400;
+    color: #fff;
+	text-decoration:none;
+}
+.forgotpasswordtext {
+    font-size:14px;
+	color:#1d246f;
+	line-height:20px;
+    font-weight: 500;
+	margin-top: 6px;
+}
+.forgotpasswordtext a {
+	color:#673400;
+	text-decoration: underline;
+}
+.forgotpasswordtext a:hover {
+	color:#000;
+	text-decoration: underline;
+}
+
+
+
+/****************************************************************************************************
+Media Query css start here
+****************************************************************************************************/
+
+@media screen and (max-width : 1080px) {
+
+
+}
+
+@media screen and (max-width : 992px) {
+
+    
+    
+}
+
+@media screen and (max-width : 767px) {
+
+   
+    
+    
+}
+
+@media screen and (max-width : 480px) {
+
+
+    
+
+}
+
+@media screen and (max-width : 375px) {
+
+
+}
+
+@media screen and (max-width : 320px) {
+
+
+}
+
+

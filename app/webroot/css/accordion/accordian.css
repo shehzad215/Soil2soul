@@ -1,0 +1,73 @@
+#accordion3 {
+	width:100%; 
+	margin: 0px auto; 
+	border:0px solid #333; 
+	border-top:none; 
+}
+.accordion3 {
+	width:100%; 
+	color:#000;
+	padding:0px;
+	margin-bottom: 0px;
+    border-bottom: solid 2px #e4e4e4;
+}
+.accordion3 dt {
+	background:url("../img/plus.webp") no-repeat left center #fff;
+	font-size:16px;
+	color: #00586c;  
+	padding: 20px 0px 20px 20px;
+	font-weight: 600;
+	line-height:20px;
+	cursor:pointer;
+    border-top: solid 2px #e4e4e4;
+}
+.accordion3 dt:first-child {
+	border-top: solid 0px #e6eaec;
+}
+.accordion3 dt:hover {
+	color:#952255;
+}
+.accordion3 .open {
+	background: url("../img/minus.webp") no-repeat left center #fff; 
+	padding: 20px 0px 20px 20px;
+	color:#952255; 
+}
+.accordion3 dd {
+	overflow:hidden; 
+	background-position:left; 
+	margin:0px;	
+}
+.content_hide {
+    padding:0px 0px;
+	font-size:14px;
+	color:#262a2a;
+	line-height:22px;
+    margin-bottom: 30px;
+}
+.content_hide a {
+    color:#262a2a;
+	text-decoration: none;
+}
+.content_hide a:hover {
+    color:#952255;
+	text-decoration: none;
+}
+.content_hide ul {
+	margin: 0px 0px 0px 14px;
+	padding: 0px 0px;	
+}
+.content_hide ul li {
+	list-style-type: disc;
+	margin: 0px 0px;
+	padding: 6px 0px;
+	line-height: 20px;	
+}
+
+
+
+
+
+
+
+
+
